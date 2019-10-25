@@ -1,0 +1,525 @@
+-------------------------------------------------------------------------------
+Synchrobench-java
+A benchmark-suite to evaluate synchronization techniques
+-------------------------------------------------------------------------------
+
+Benchmark parameters
+--------------------
+  Detailed stats:          	disabled
+  Number of threads:       	1
+  Duration:                	5000 ms
+  Write ratio:             	10 %
+  Snapshot ratio:          	0 %
+  Size:                    	1024 elements
+  Range:                   	2048 elements
+  WarmUp:                  	5 s
+  Iterations:              	1
+  Benchmark:               	soft3410.CoarseGrainedChainingHashTableIntSet
+-------------------------------------------------------------------------------
+Benchmark statistics
+-------------------------------------------------------------------------------
+  Throughput (ops/s):       	1.39452292E7
+  Elapsed time (s):         	5.0
+  Operations:               	69726146	( 100 %)
+    effective updates:     	3487427	( 5.00 %)
+    |--add successful:     	1743709	( 2.50 %)
+    |--remove succ.:       	1743718	( 2.50 %)
+    size successful:       	0	( 0.00 %)
+    contains succ.:        	31388902	( 45.02 %)
+    unsuccessful ops:      	34849817	( 49.98 %)
+  Final size:              	1015
+  Expected size:           	1015
+
+
+BEGGINING NEW TEST
+
+-------------------------------------------------------------------------------
+Synchrobench-java
+A benchmark-suite to evaluate synchronization techniques
+-------------------------------------------------------------------------------
+
+Benchmark parameters
+--------------------
+  Detailed stats:          	disabled
+  Number of threads:       	1
+  Duration:                	5000 ms
+  Write ratio:             	50 %
+  Snapshot ratio:          	0 %
+  Size:                    	1024 elements
+  Range:                   	2048 elements
+  WarmUp:                  	5 s
+  Iterations:              	1
+  Benchmark:               	soft3410.CoarseGrainedChainingHashTableIntSet
+-------------------------------------------------------------------------------
+Benchmark statistics
+-------------------------------------------------------------------------------
+  Throughput (ops/s):       	1.11681924E7
+  Elapsed time (s):         	5.0
+  Operations:               	55840962	( 100 %)
+    effective updates:     	13960588	( 25.00 %)
+    |--add successful:     	6980280	( 12.50 %)
+    |--remove succ.:       	6980308	( 12.50 %)
+    size successful:       	0	( 0.00 %)
+    contains succ.:        	13951400	( 24.98 %)
+    unsuccessful ops:      	27928974	( 50.02 %)
+  Final size:              	996
+  Expected size:           	996
+
+
+BEGGINING NEW TEST
+
+-------------------------------------------------------------------------------
+Synchrobench-java
+A benchmark-suite to evaluate synchronization techniques
+-------------------------------------------------------------------------------
+
+Benchmark parameters
+--------------------
+  Detailed stats:          	disabled
+  Number of threads:       	1
+  Duration:                	5000 ms
+  Write ratio:             	90 %
+  Snapshot ratio:          	0 %
+  Size:                    	1024 elements
+  Range:                   	2048 elements
+  WarmUp:                  	5 s
+  Iterations:              	1
+  Benchmark:               	soft3410.CoarseGrainedChainingHashTableIntSet
+-------------------------------------------------------------------------------
+Benchmark statistics
+-------------------------------------------------------------------------------
+  Throughput (ops/s):       	1.1320081E7
+  Elapsed time (s):         	5.0
+  Operations:               	56600405	( 100 %)
+    effective updates:     	25471925	( 45.00 %)
+    |--add successful:     	12735960	( 22.50 %)
+    |--remove succ.:       	12735965	( 22.50 %)
+    size successful:       	0	( 0.00 %)
+    contains succ.:        	2831126	( 5.00 %)
+    unsuccessful ops:      	28297354	( 49.99 %)
+  Final size:              	1019
+  Expected size:           	1019
+
+
+BEGGINING NEW TEST
+
+-------------------------------------------------------------------------------
+Synchrobench-java
+A benchmark-suite to evaluate synchronization techniques
+-------------------------------------------------------------------------------
+
+Benchmark parameters
+--------------------
+  Detailed stats:          	disabled
+  Number of threads:       	2
+  Duration:                	5000 ms
+  Write ratio:             	10 %
+  Snapshot ratio:          	0 %
+  Size:                    	1024 elements
+  Range:                   	2048 elements
+  WarmUp:                  	5 s
+  Iterations:              	1
+  Benchmark:               	soft3410.CoarseGrainedChainingHashTableIntSet
+-------------------------------------------------------------------------------
+Benchmark statistics
+-------------------------------------------------------------------------------
+  Throughput (ops/s):       	6536287.742451509
+  Elapsed time (s):         	5.001
+  Operations:               	32687975	( 100 %)
+    effective updates:     	1636252	( 5.01 %)
+    |--add successful:     	818124	( 2.50 %)
+    |--remove succ.:       	818128	( 2.50 %)
+    size successful:       	0	( 0.00 %)
+    contains succ.:        	14700149	( 44.97 %)
+    unsuccessful ops:      	16351574	( 50.02 %)
+  Final size:              	1020
+  Expected size:           	1020
+
+
+BEGGINING NEW TEST
+
+-------------------------------------------------------------------------------
+Synchrobench-java
+A benchmark-suite to evaluate synchronization techniques
+-------------------------------------------------------------------------------
+
+Benchmark parameters
+--------------------
+  Detailed stats:          	disabled
+  Number of threads:       	2
+  Duration:                	5000 ms
+  Write ratio:             	50 %
+  Snapshot ratio:          	0 %
+  Size:                    	1024 elements
+  Range:                   	2048 elements
+  WarmUp:                  	5 s
+  Iterations:              	1
+  Benchmark:               	soft3410.CoarseGrainedChainingHashTableIntSet
+-------------------------------------------------------------------------------
+Benchmark statistics
+-------------------------------------------------------------------------------
+  Throughput (ops/s):       	5658569.486102779
+  Elapsed time (s):         	5.001
+  Operations:               	28298506	( 100 %)
+    effective updates:     	7076613	( 25.01 %)
+    |--add successful:     	3538309	( 12.50 %)
+    |--remove succ.:       	3538304	( 12.50 %)
+    size successful:       	0	( 0.00 %)
+    contains succ.:        	7078795	( 25.01 %)
+    unsuccessful ops:      	14143098	( 49.98 %)
+  Final size:              	1029
+  Expected size:           	1029
+
+
+BEGGINING NEW TEST
+
+-------------------------------------------------------------------------------
+Synchrobench-java
+A benchmark-suite to evaluate synchronization techniques
+-------------------------------------------------------------------------------
+
+Benchmark parameters
+--------------------
+  Detailed stats:          	disabled
+  Number of threads:       	2
+  Duration:                	5000 ms
+  Write ratio:             	90 %
+  Snapshot ratio:          	0 %
+  Size:                    	1024 elements
+  Range:                   	2048 elements
+  WarmUp:                  	5 s
+  Iterations:              	1
+  Benchmark:               	soft3410.CoarseGrainedChainingHashTableIntSet
+-------------------------------------------------------------------------------
+Benchmark statistics
+-------------------------------------------------------------------------------
+  Throughput (ops/s):       	5425583.483303339
+  Elapsed time (s):         	5.001
+  Operations:               	27133343	( 100 %)
+    effective updates:     	12210719	( 45.00 %)
+    |--add successful:     	6105366	( 22.50 %)
+    |--remove succ.:       	6105353	( 22.50 %)
+    size successful:       	0	( 0.00 %)
+    contains succ.:        	1356874	( 5.00 %)
+    unsuccessful ops:      	13565750	( 50.00 %)
+  Final size:              	1037
+  Expected size:           	1037
+
+
+BEGGINING NEW TEST
+
+-------------------------------------------------------------------------------
+Synchrobench-java
+A benchmark-suite to evaluate synchronization techniques
+-------------------------------------------------------------------------------
+
+Benchmark parameters
+--------------------
+  Detailed stats:          	disabled
+  Number of threads:       	4
+  Duration:                	5000 ms
+  Write ratio:             	10 %
+  Snapshot ratio:          	0 %
+  Size:                    	1024 elements
+  Range:                   	2048 elements
+  WarmUp:                  	5 s
+  Iterations:              	1
+  Benchmark:               	soft3410.CoarseGrainedChainingHashTableIntSet
+-------------------------------------------------------------------------------
+Benchmark statistics
+-------------------------------------------------------------------------------
+  Throughput (ops/s):       	5534261.547690461
+  Elapsed time (s):         	5.001
+  Operations:               	27676842	( 100 %)
+    effective updates:     	1386176	( 5.01 %)
+    |--add successful:     	693099	( 2.50 %)
+    |--remove succ.:       	693077	( 2.50 %)
+    size successful:       	0	( 0.00 %)
+    contains succ.:        	12461514	( 45.03 %)
+    unsuccessful ops:      	13829152	( 49.97 %)
+  Final size:              	1046
+  Expected size:           	1046
+
+
+BEGGINING NEW TEST
+
+-------------------------------------------------------------------------------
+Synchrobench-java
+A benchmark-suite to evaluate synchronization techniques
+-------------------------------------------------------------------------------
+
+Benchmark parameters
+--------------------
+  Detailed stats:          	disabled
+  Number of threads:       	4
+  Duration:                	5000 ms
+  Write ratio:             	50 %
+  Snapshot ratio:          	0 %
+  Size:                    	1024 elements
+  Range:                   	2048 elements
+  WarmUp:                  	5 s
+  Iterations:              	1
+  Benchmark:               	soft3410.CoarseGrainedChainingHashTableIntSet
+-------------------------------------------------------------------------------
+Benchmark statistics
+-------------------------------------------------------------------------------
+  Throughput (ops/s):       	4828266.040375775
+  Elapsed time (s):         	5.003
+  Operations:               	24155815	( 100 %)
+    effective updates:     	6036184	( 24.99 %)
+    |--add successful:     	3018081	( 12.49 %)
+    |--remove succ.:       	3018103	( 12.49 %)
+    size successful:       	0	( 0.00 %)
+    contains succ.:        	6038461	( 25.00 %)
+    unsuccessful ops:      	12081170	( 50.01 %)
+  Final size:              	1002
+  Expected size:           	1002
+
+
+BEGGINING NEW TEST
+
+-------------------------------------------------------------------------------
+Synchrobench-java
+A benchmark-suite to evaluate synchronization techniques
+-------------------------------------------------------------------------------
+
+Benchmark parameters
+--------------------
+  Detailed stats:          	disabled
+  Number of threads:       	4
+  Duration:                	5000 ms
+  Write ratio:             	90 %
+  Snapshot ratio:          	0 %
+  Size:                    	1024 elements
+  Range:                   	2048 elements
+  WarmUp:                  	5 s
+  Iterations:              	1
+  Benchmark:               	soft3410.CoarseGrainedChainingHashTableIntSet
+-------------------------------------------------------------------------------
+Benchmark statistics
+-------------------------------------------------------------------------------
+  Throughput (ops/s):       	4997866.853258696
+  Elapsed time (s):         	5.002
+  Operations:               	24999330	( 100 %)
+    effective updates:     	11251708	( 45.01 %)
+    |--add successful:     	5625846	( 22.50 %)
+    |--remove succ.:       	5625862	( 22.50 %)
+    size successful:       	0	( 0.00 %)
+    contains succ.:        	1250690	( 5.00 %)
+    unsuccessful ops:      	12496932	( 49.99 %)
+  Final size:              	1008
+  Expected size:           	1008
+
+
+BEGGINING NEW TEST
+
+-------------------------------------------------------------------------------
+Synchrobench-java
+A benchmark-suite to evaluate synchronization techniques
+-------------------------------------------------------------------------------
+
+Benchmark parameters
+--------------------
+  Detailed stats:          	disabled
+  Number of threads:       	6
+  Duration:                	5000 ms
+  Write ratio:             	10 %
+  Snapshot ratio:          	0 %
+  Size:                    	1024 elements
+  Range:                   	2048 elements
+  WarmUp:                  	5 s
+  Iterations:              	1
+  Benchmark:               	soft3410.CoarseGrainedChainingHashTableIntSet
+-------------------------------------------------------------------------------
+Benchmark statistics
+-------------------------------------------------------------------------------
+  Throughput (ops/s):       	8899965.847813062
+  Elapsed time (s):         	5.007
+  Operations:               	44562129	( 100 %)
+    effective updates:     	2225898	( 5.00 %)
+    |--add successful:     	1112941	( 2.50 %)
+    |--remove succ.:       	1112957	( 2.50 %)
+    size successful:       	0	( 0.00 %)
+    contains succ.:        	20059222	( 45.01 %)
+    unsuccessful ops:      	22277009	( 49.99 %)
+  Final size:              	1008
+  Expected size:           	1008
+
+
+BEGGINING NEW TEST
+
+-------------------------------------------------------------------------------
+Synchrobench-java
+A benchmark-suite to evaluate synchronization techniques
+-------------------------------------------------------------------------------
+
+Benchmark parameters
+--------------------
+  Detailed stats:          	disabled
+  Number of threads:       	6
+  Duration:                	5000 ms
+  Write ratio:             	50 %
+  Snapshot ratio:          	0 %
+  Size:                    	1024 elements
+  Range:                   	2048 elements
+  WarmUp:                  	5 s
+  Iterations:              	1
+  Benchmark:               	soft3410.CoarseGrainedChainingHashTableIntSet
+-------------------------------------------------------------------------------
+Benchmark statistics
+-------------------------------------------------------------------------------
+  Throughput (ops/s):       	8261138.839018552
+  Elapsed time (s):         	5.013
+  Operations:               	41413089	( 100 %)
+    effective updates:     	10355204	( 25.00 %)
+    |--add successful:     	5177596	( 12.50 %)
+    |--remove succ.:       	5177608	( 12.50 %)
+    size successful:       	0	( 0.00 %)
+    contains succ.:        	10351134	( 24.99 %)
+    unsuccessful ops:      	20706751	( 50.00 %)
+  Final size:              	1012
+  Expected size:           	1012
+
+
+BEGGINING NEW TEST
+
+-------------------------------------------------------------------------------
+Synchrobench-java
+A benchmark-suite to evaluate synchronization techniques
+-------------------------------------------------------------------------------
+
+Benchmark parameters
+--------------------
+  Detailed stats:          	disabled
+  Number of threads:       	6
+  Duration:                	5000 ms
+  Write ratio:             	90 %
+  Snapshot ratio:          	0 %
+  Size:                    	1024 elements
+  Range:                   	2048 elements
+  WarmUp:                  	5 s
+  Iterations:              	1
+  Benchmark:               	soft3410.CoarseGrainedChainingHashTableIntSet
+-------------------------------------------------------------------------------
+Benchmark statistics
+-------------------------------------------------------------------------------
+  Throughput (ops/s):       	7633676.993803717
+  Elapsed time (s):         	5.003
+  Operations:               	38191286	( 100 %)
+    effective updates:     	17188656	( 45.01 %)
+    |--add successful:     	8594333	( 22.50 %)
+    |--remove succ.:       	8594323	( 22.50 %)
+    size successful:       	0	( 0.00 %)
+    contains succ.:        	1910009	( 5.00 %)
+    unsuccessful ops:      	19092621	( 49.99 %)
+  Final size:              	1034
+  Expected size:           	1034
+
+
+BEGGINING NEW TEST
+
+-------------------------------------------------------------------------------
+Synchrobench-java
+A benchmark-suite to evaluate synchronization techniques
+-------------------------------------------------------------------------------
+
+Benchmark parameters
+--------------------
+  Detailed stats:          	disabled
+  Number of threads:       	8
+  Duration:                	5000 ms
+  Write ratio:             	10 %
+  Snapshot ratio:          	0 %
+  Size:                    	1024 elements
+  Range:                   	2048 elements
+  WarmUp:                  	5 s
+  Iterations:              	1
+  Benchmark:               	soft3410.CoarseGrainedChainingHashTableIntSet
+-------------------------------------------------------------------------------
+Benchmark statistics
+-------------------------------------------------------------------------------
+  Throughput (ops/s):       	9079086.113886114
+  Elapsed time (s):         	5.005
+  Operations:               	45440826	( 100 %)
+    effective updates:     	2269962	( 5.00 %)
+    |--add successful:     	1134977	( 2.50 %)
+    |--remove succ.:       	1134985	( 2.50 %)
+    size successful:       	0	( 0.00 %)
+    contains succ.:        	20454966	( 45.01 %)
+    unsuccessful ops:      	22715898	( 49.99 %)
+  Final size:              	1016
+  Expected size:           	1016
+
+
+BEGGINING NEW TEST
+
+-------------------------------------------------------------------------------
+Synchrobench-java
+A benchmark-suite to evaluate synchronization techniques
+-------------------------------------------------------------------------------
+
+Benchmark parameters
+--------------------
+  Detailed stats:          	disabled
+  Number of threads:       	8
+  Duration:                	5000 ms
+  Write ratio:             	50 %
+  Snapshot ratio:          	0 %
+  Size:                    	1024 elements
+  Range:                   	2048 elements
+  WarmUp:                  	5 s
+  Iterations:              	1
+  Benchmark:               	soft3410.CoarseGrainedChainingHashTableIntSet
+-------------------------------------------------------------------------------
+Benchmark statistics
+-------------------------------------------------------------------------------
+  Throughput (ops/s):       	8320366.033966034
+  Elapsed time (s):         	5.005
+  Operations:               	41643432	( 100 %)
+    effective updates:     	10409448	( 25.00 %)
+    |--add successful:     	5204735	( 12.50 %)
+    |--remove succ.:       	5204713	( 12.50 %)
+    size successful:       	0	( 0.00 %)
+    contains succ.:        	10416866	( 25.01 %)
+    unsuccessful ops:      	20817118	( 49.99 %)
+  Final size:              	1046
+  Expected size:           	1046
+
+
+BEGGINING NEW TEST
+
+-------------------------------------------------------------------------------
+Synchrobench-java
+A benchmark-suite to evaluate synchronization techniques
+-------------------------------------------------------------------------------
+
+Benchmark parameters
+--------------------
+  Detailed stats:          	disabled
+  Number of threads:       	8
+  Duration:                	5000 ms
+  Write ratio:             	90 %
+  Snapshot ratio:          	0 %
+  Size:                    	1024 elements
+  Range:                   	2048 elements
+  WarmUp:                  	5 s
+  Iterations:              	1
+  Benchmark:               	soft3410.CoarseGrainedChainingHashTableIntSet
+-------------------------------------------------------------------------------
+Benchmark statistics
+-------------------------------------------------------------------------------
+  Throughput (ops/s):       	7810901.639344263
+  Elapsed time (s):         	5.002
+  Operations:               	39070130	( 100 %)
+    effective updates:     	17580222	( 45.00 %)
+    |--add successful:     	8790139	( 22.50 %)
+    |--remove succ.:       	8790083	( 22.50 %)
+    size successful:       	0	( 0.00 %)
+    contains succ.:        	1952384	( 5.00 %)
+    unsuccessful ops:      	19537524	( 50.01 %)
+  Final size:              	1080
+  Expected size:           	1080
+
+
+TESTS COMPLETE
+

@@ -1,0 +1,525 @@
+-------------------------------------------------------------------------------
+Synchrobench-java
+A benchmark-suite to evaluate synchronization techniques
+-------------------------------------------------------------------------------
+
+Benchmark parameters
+--------------------
+  Detailed stats:          	disabled
+  Number of threads:       	1
+  Duration:                	5000 ms
+  Write ratio:             	10 %
+  Snapshot ratio:          	0 %
+  Size:                    	1024 elements
+  Range:                   	2048 elements
+  WarmUp:                  	5 s
+  Iterations:              	1
+  Benchmark:               	soft3410.CoarseGrainedLinkedListIntSet
+-------------------------------------------------------------------------------
+Benchmark statistics
+-------------------------------------------------------------------------------
+  Throughput (ops/s):       	217302.33953209355
+  Elapsed time (s):         	5.001
+  Operations:               	1086729	( 100 %)
+    effective updates:     	54352	( 5.00 %)
+    |--add successful:     	27156	( 2.50 %)
+    |--remove succ.:       	27196	( 2.50 %)
+    size successful:       	0	( 0.00 %)
+    contains succ.:        	488483	( 44.95 %)
+    unsuccessful ops:      	543894	( 50.05 %)
+  Final size:              	984
+  Expected size:           	984
+
+
+BEGGINING NEW TEST
+
+-------------------------------------------------------------------------------
+Synchrobench-java
+A benchmark-suite to evaluate synchronization techniques
+-------------------------------------------------------------------------------
+
+Benchmark parameters
+--------------------
+  Detailed stats:          	disabled
+  Number of threads:       	1
+  Duration:                	5000 ms
+  Write ratio:             	50 %
+  Snapshot ratio:          	0 %
+  Size:                    	1024 elements
+  Range:                   	2048 elements
+  WarmUp:                  	5 s
+  Iterations:              	1
+  Benchmark:               	soft3410.CoarseGrainedLinkedListIntSet
+-------------------------------------------------------------------------------
+Benchmark statistics
+-------------------------------------------------------------------------------
+  Throughput (ops/s):       	247689.4
+  Elapsed time (s):         	5.0
+  Operations:               	1238447	( 100 %)
+    effective updates:     	309984	( 25.03 %)
+    |--add successful:     	154983	( 12.51 %)
+    |--remove succ.:       	155001	( 12.52 %)
+    size successful:       	0	( 0.00 %)
+    contains succ.:        	311002	( 25.11 %)
+    unsuccessful ops:      	617461	( 49.86 %)
+  Final size:              	1006
+  Expected size:           	1006
+
+
+BEGGINING NEW TEST
+
+-------------------------------------------------------------------------------
+Synchrobench-java
+A benchmark-suite to evaluate synchronization techniques
+-------------------------------------------------------------------------------
+
+Benchmark parameters
+--------------------
+  Detailed stats:          	disabled
+  Number of threads:       	1
+  Duration:                	5000 ms
+  Write ratio:             	90 %
+  Snapshot ratio:          	0 %
+  Size:                    	1024 elements
+  Range:                   	2048 elements
+  WarmUp:                  	5 s
+  Iterations:              	1
+  Benchmark:               	soft3410.CoarseGrainedLinkedListIntSet
+-------------------------------------------------------------------------------
+Benchmark statistics
+-------------------------------------------------------------------------------
+  Throughput (ops/s):       	271601.67966406717
+  Elapsed time (s):         	5.001
+  Operations:               	1358280	( 100 %)
+    effective updates:     	610568	( 44.95 %)
+    |--add successful:     	305279	( 22.48 %)
+    |--remove succ.:       	305289	( 22.48 %)
+    size successful:       	0	( 0.00 %)
+    contains succ.:        	67823	( 4.99 %)
+    unsuccessful ops:      	679889	( 50.06 %)
+  Final size:              	1014
+  Expected size:           	1014
+
+
+BEGGINING NEW TEST
+
+-------------------------------------------------------------------------------
+Synchrobench-java
+A benchmark-suite to evaluate synchronization techniques
+-------------------------------------------------------------------------------
+
+Benchmark parameters
+--------------------
+  Detailed stats:          	disabled
+  Number of threads:       	2
+  Duration:                	5000 ms
+  Write ratio:             	10 %
+  Snapshot ratio:          	0 %
+  Size:                    	1024 elements
+  Range:                   	2048 elements
+  WarmUp:                  	5 s
+  Iterations:              	1
+  Benchmark:               	soft3410.CoarseGrainedLinkedListIntSet
+-------------------------------------------------------------------------------
+Benchmark statistics
+-------------------------------------------------------------------------------
+  Throughput (ops/s):       	186992.4
+  Elapsed time (s):         	5.0
+  Operations:               	934962	( 100 %)
+    effective updates:     	46288	( 4.95 %)
+    |--add successful:     	23133	( 2.47 %)
+    |--remove succ.:       	23155	( 2.48 %)
+    size successful:       	0	( 0.00 %)
+    contains succ.:        	423943	( 45.34 %)
+    unsuccessful ops:      	464731	( 49.71 %)
+  Final size:              	1002
+  Expected size:           	1002
+
+
+BEGGINING NEW TEST
+
+-------------------------------------------------------------------------------
+Synchrobench-java
+A benchmark-suite to evaluate synchronization techniques
+-------------------------------------------------------------------------------
+
+Benchmark parameters
+--------------------
+  Detailed stats:          	disabled
+  Number of threads:       	2
+  Duration:                	5000 ms
+  Write ratio:             	50 %
+  Snapshot ratio:          	0 %
+  Size:                    	1024 elements
+  Range:                   	2048 elements
+  WarmUp:                  	5 s
+  Iterations:              	1
+  Benchmark:               	soft3410.CoarseGrainedLinkedListIntSet
+-------------------------------------------------------------------------------
+Benchmark statistics
+-------------------------------------------------------------------------------
+  Throughput (ops/s):       	217588.6
+  Elapsed time (s):         	5.0
+  Operations:               	1087943	( 100 %)
+    effective updates:     	272097	( 25.01 %)
+    |--add successful:     	136044	( 12.50 %)
+    |--remove succ.:       	136053	( 12.51 %)
+    size successful:       	0	( 0.00 %)
+    contains succ.:        	271053	( 24.91 %)
+    unsuccessful ops:      	544793	( 50.08 %)
+  Final size:              	1015
+  Expected size:           	1015
+
+
+BEGGINING NEW TEST
+
+-------------------------------------------------------------------------------
+Synchrobench-java
+A benchmark-suite to evaluate synchronization techniques
+-------------------------------------------------------------------------------
+
+Benchmark parameters
+--------------------
+  Detailed stats:          	disabled
+  Number of threads:       	2
+  Duration:                	5000 ms
+  Write ratio:             	90 %
+  Snapshot ratio:          	0 %
+  Size:                    	1024 elements
+  Range:                   	2048 elements
+  WarmUp:                  	5 s
+  Iterations:              	1
+  Benchmark:               	soft3410.CoarseGrainedLinkedListIntSet
+-------------------------------------------------------------------------------
+Benchmark statistics
+-------------------------------------------------------------------------------
+  Throughput (ops/s):       	241032.99340131972
+  Elapsed time (s):         	5.001
+  Operations:               	1205406	( 100 %)
+    effective updates:     	542362	( 44.99 %)
+    |--add successful:     	271190	( 22.50 %)
+    |--remove succ.:       	271172	( 22.50 %)
+    size successful:       	0	( 0.00 %)
+    contains succ.:        	60057	( 4.98 %)
+    unsuccessful ops:      	602987	( 50.02 %)
+  Final size:              	1042
+  Expected size:           	1042
+
+
+BEGGINING NEW TEST
+
+-------------------------------------------------------------------------------
+Synchrobench-java
+A benchmark-suite to evaluate synchronization techniques
+-------------------------------------------------------------------------------
+
+Benchmark parameters
+--------------------
+  Detailed stats:          	disabled
+  Number of threads:       	4
+  Duration:                	5000 ms
+  Write ratio:             	10 %
+  Snapshot ratio:          	0 %
+  Size:                    	1024 elements
+  Range:                   	2048 elements
+  WarmUp:                  	5 s
+  Iterations:              	1
+  Benchmark:               	soft3410.CoarseGrainedLinkedListIntSet
+-------------------------------------------------------------------------------
+Benchmark statistics
+-------------------------------------------------------------------------------
+  Throughput (ops/s):       	196413.3173365327
+  Elapsed time (s):         	5.001
+  Operations:               	982263	( 100 %)
+    effective updates:     	49275	( 5.02 %)
+    |--add successful:     	24626	( 2.51 %)
+    |--remove succ.:       	24649	( 2.51 %)
+    size successful:       	0	( 0.00 %)
+    contains succ.:        	441686	( 44.97 %)
+    unsuccessful ops:      	491302	( 50.02 %)
+  Final size:              	1001
+  Expected size:           	1001
+
+
+BEGGINING NEW TEST
+
+-------------------------------------------------------------------------------
+Synchrobench-java
+A benchmark-suite to evaluate synchronization techniques
+-------------------------------------------------------------------------------
+
+Benchmark parameters
+--------------------
+  Detailed stats:          	disabled
+  Number of threads:       	4
+  Duration:                	5000 ms
+  Write ratio:             	50 %
+  Snapshot ratio:          	0 %
+  Size:                    	1024 elements
+  Range:                   	2048 elements
+  WarmUp:                  	5 s
+  Iterations:              	1
+  Benchmark:               	soft3410.CoarseGrainedLinkedListIntSet
+-------------------------------------------------------------------------------
+Benchmark statistics
+-------------------------------------------------------------------------------
+  Throughput (ops/s):       	225506.49870025992
+  Elapsed time (s):         	5.001
+  Operations:               	1127758	( 100 %)
+    effective updates:     	281478	( 24.96 %)
+    |--add successful:     	140758	( 12.48 %)
+    |--remove succ.:       	140720	( 12.48 %)
+    size successful:       	0	( 0.00 %)
+    contains succ.:        	281974	( 25.00 %)
+    unsuccessful ops:      	564306	( 50.04 %)
+  Final size:              	1062
+  Expected size:           	1062
+
+
+BEGGINING NEW TEST
+
+-------------------------------------------------------------------------------
+Synchrobench-java
+A benchmark-suite to evaluate synchronization techniques
+-------------------------------------------------------------------------------
+
+Benchmark parameters
+--------------------
+  Detailed stats:          	disabled
+  Number of threads:       	4
+  Duration:                	5000 ms
+  Write ratio:             	90 %
+  Snapshot ratio:          	0 %
+  Size:                    	1024 elements
+  Range:                   	2048 elements
+  WarmUp:                  	5 s
+  Iterations:              	1
+  Benchmark:               	soft3410.CoarseGrainedLinkedListIntSet
+-------------------------------------------------------------------------------
+Benchmark statistics
+-------------------------------------------------------------------------------
+  Throughput (ops/s):       	251385.5228954209
+  Elapsed time (s):         	5.001
+  Operations:               	1257179	( 100 %)
+    effective updates:     	565007	( 44.94 %)
+    |--add successful:     	282510	( 22.47 %)
+    |--remove succ.:       	282497	( 22.47 %)
+    size successful:       	0	( 0.00 %)
+    contains succ.:        	63168	( 5.02 %)
+    unsuccessful ops:      	629004	( 50.03 %)
+  Final size:              	1037
+  Expected size:           	1037
+
+
+BEGGINING NEW TEST
+
+-------------------------------------------------------------------------------
+Synchrobench-java
+A benchmark-suite to evaluate synchronization techniques
+-------------------------------------------------------------------------------
+
+Benchmark parameters
+--------------------
+  Detailed stats:          	disabled
+  Number of threads:       	6
+  Duration:                	5000 ms
+  Write ratio:             	10 %
+  Snapshot ratio:          	0 %
+  Size:                    	1024 elements
+  Range:                   	2048 elements
+  WarmUp:                  	5 s
+  Iterations:              	1
+  Benchmark:               	soft3410.CoarseGrainedLinkedListIntSet
+-------------------------------------------------------------------------------
+Benchmark statistics
+-------------------------------------------------------------------------------
+  Throughput (ops/s):       	196524.99000399842
+  Elapsed time (s):         	5.002
+  Operations:               	983018	( 100 %)
+    effective updates:     	49222	( 5.01 %)
+    |--add successful:     	24596	( 2.50 %)
+    |--remove succ.:       	24626	( 2.51 %)
+    size successful:       	0	( 0.00 %)
+    contains succ.:        	443578	( 45.12 %)
+    unsuccessful ops:      	490218	( 49.87 %)
+  Final size:              	994
+  Expected size:           	994
+
+
+BEGGINING NEW TEST
+
+-------------------------------------------------------------------------------
+Synchrobench-java
+A benchmark-suite to evaluate synchronization techniques
+-------------------------------------------------------------------------------
+
+Benchmark parameters
+--------------------
+  Detailed stats:          	disabled
+  Number of threads:       	6
+  Duration:                	5000 ms
+  Write ratio:             	50 %
+  Snapshot ratio:          	0 %
+  Size:                    	1024 elements
+  Range:                   	2048 elements
+  WarmUp:                  	5 s
+  Iterations:              	1
+  Benchmark:               	soft3410.CoarseGrainedLinkedListIntSet
+-------------------------------------------------------------------------------
+Benchmark statistics
+-------------------------------------------------------------------------------
+  Throughput (ops/s):       	220098.94063561864
+  Elapsed time (s):         	5.003
+  Operations:               	1101155	( 100 %)
+    effective updates:     	274447	( 24.92 %)
+    |--add successful:     	137221	( 12.46 %)
+    |--remove succ.:       	137226	( 12.46 %)
+    size successful:       	0	( 0.00 %)
+    contains succ.:        	277146	( 25.17 %)
+    unsuccessful ops:      	549562	( 49.91 %)
+  Final size:              	1019
+  Expected size:           	1019
+
+
+BEGGINING NEW TEST
+
+-------------------------------------------------------------------------------
+Synchrobench-java
+A benchmark-suite to evaluate synchronization techniques
+-------------------------------------------------------------------------------
+
+Benchmark parameters
+--------------------
+  Detailed stats:          	disabled
+  Number of threads:       	6
+  Duration:                	5000 ms
+  Write ratio:             	90 %
+  Snapshot ratio:          	0 %
+  Size:                    	1024 elements
+  Range:                   	2048 elements
+  WarmUp:                  	5 s
+  Iterations:              	1
+  Benchmark:               	soft3410.CoarseGrainedLinkedListIntSet
+-------------------------------------------------------------------------------
+Benchmark statistics
+-------------------------------------------------------------------------------
+  Throughput (ops/s):       	243101.37972405518
+  Elapsed time (s):         	5.001
+  Operations:               	1215750	( 100 %)
+    effective updates:     	547779	( 45.06 %)
+    |--add successful:     	273890	( 22.53 %)
+    |--remove succ.:       	273889	( 22.53 %)
+    size successful:       	0	( 0.00 %)
+    contains succ.:        	60386	( 4.97 %)
+    unsuccessful ops:      	607585	( 49.98 %)
+  Final size:              	1025
+  Expected size:           	1025
+
+
+BEGGINING NEW TEST
+
+-------------------------------------------------------------------------------
+Synchrobench-java
+A benchmark-suite to evaluate synchronization techniques
+-------------------------------------------------------------------------------
+
+Benchmark parameters
+--------------------
+  Detailed stats:          	disabled
+  Number of threads:       	8
+  Duration:                	5000 ms
+  Write ratio:             	10 %
+  Snapshot ratio:          	0 %
+  Size:                    	1024 elements
+  Range:                   	2048 elements
+  WarmUp:                  	5 s
+  Iterations:              	1
+  Benchmark:               	soft3410.CoarseGrainedLinkedListIntSet
+-------------------------------------------------------------------------------
+Benchmark statistics
+-------------------------------------------------------------------------------
+  Throughput (ops/s):       	199208.71651339464
+  Elapsed time (s):         	5.002
+  Operations:               	996442	( 100 %)
+    effective updates:     	49766	( 4.99 %)
+    |--add successful:     	24876	( 2.50 %)
+    |--remove succ.:       	24890	( 2.50 %)
+    size successful:       	0	( 0.00 %)
+    contains succ.:        	446661	( 44.83 %)
+    unsuccessful ops:      	500015	( 50.18 %)
+  Final size:              	1010
+  Expected size:           	1010
+
+
+BEGGINING NEW TEST
+
+-------------------------------------------------------------------------------
+Synchrobench-java
+A benchmark-suite to evaluate synchronization techniques
+-------------------------------------------------------------------------------
+
+Benchmark parameters
+--------------------
+  Detailed stats:          	disabled
+  Number of threads:       	8
+  Duration:                	5000 ms
+  Write ratio:             	50 %
+  Snapshot ratio:          	0 %
+  Size:                    	1024 elements
+  Range:                   	2048 elements
+  WarmUp:                  	5 s
+  Iterations:              	1
+  Benchmark:               	soft3410.CoarseGrainedLinkedListIntSet
+-------------------------------------------------------------------------------
+Benchmark statistics
+-------------------------------------------------------------------------------
+  Throughput (ops/s):       	221397.28217426062
+  Elapsed time (s):         	5.004
+  Operations:               	1107872	( 100 %)
+    effective updates:     	276484	( 24.96 %)
+    |--add successful:     	138245	( 12.48 %)
+    |--remove succ.:       	138239	( 12.48 %)
+    size successful:       	0	( 0.00 %)
+    contains succ.:        	277002	( 25.00 %)
+    unsuccessful ops:      	554386	( 50.04 %)
+  Final size:              	1030
+  Expected size:           	1030
+
+
+BEGGINING NEW TEST
+
+-------------------------------------------------------------------------------
+Synchrobench-java
+A benchmark-suite to evaluate synchronization techniques
+-------------------------------------------------------------------------------
+
+Benchmark parameters
+--------------------
+  Detailed stats:          	disabled
+  Number of threads:       	8
+  Duration:                	5000 ms
+  Write ratio:             	90 %
+  Snapshot ratio:          	0 %
+  Size:                    	1024 elements
+  Range:                   	2048 elements
+  WarmUp:                  	5 s
+  Iterations:              	1
+  Benchmark:               	soft3410.CoarseGrainedLinkedListIntSet
+-------------------------------------------------------------------------------
+Benchmark statistics
+-------------------------------------------------------------------------------
+  Throughput (ops/s):       	242821.10733559864
+  Elapsed time (s):         	5.003
+  Operations:               	1214834	( 100 %)
+    effective updates:     	545933	( 44.94 %)
+    |--add successful:     	272964	( 22.47 %)
+    |--remove succ.:       	272969	( 22.47 %)
+    size successful:       	0	( 0.00 %)
+    contains succ.:        	60787	( 5.00 %)
+    unsuccessful ops:      	608114	( 50.06 %)
+  Final size:              	1019
+  Expected size:           	1019
+
+
+TESTS COMPLETE
+

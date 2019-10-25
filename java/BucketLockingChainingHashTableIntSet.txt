@@ -1,0 +1,525 @@
+-------------------------------------------------------------------------------
+Synchrobench-java
+A benchmark-suite to evaluate synchronization techniques
+-------------------------------------------------------------------------------
+
+Benchmark parameters
+--------------------
+  Detailed stats:          	disabled
+  Number of threads:       	1
+  Duration:                	5000 ms
+  Write ratio:             	10 %
+  Snapshot ratio:          	0 %
+  Size:                    	1024 elements
+  Range:                   	2048 elements
+  WarmUp:                  	5 s
+  Iterations:              	1
+  Benchmark:               	soft3410.BucketLockingChainingHashTableIntSet
+-------------------------------------------------------------------------------
+Benchmark statistics
+-------------------------------------------------------------------------------
+  Throughput (ops/s):       	1.230280323935213E7
+  Elapsed time (s):         	5.001
+  Operations:               	61526319	( 100 %)
+    effective updates:     	3076888	( 5.00 %)
+    |--add successful:     	1538468	( 2.50 %)
+    |--remove succ.:       	1538420	( 2.50 %)
+    size successful:       	0	( 0.00 %)
+    contains succ.:        	27705505	( 45.03 %)
+    unsuccessful ops:      	30743926	( 49.97 %)
+  Final size:              	1072
+  Expected size:           	1072
+
+
+BEGGINING NEW TEST
+
+-------------------------------------------------------------------------------
+Synchrobench-java
+A benchmark-suite to evaluate synchronization techniques
+-------------------------------------------------------------------------------
+
+Benchmark parameters
+--------------------
+  Detailed stats:          	disabled
+  Number of threads:       	1
+  Duration:                	5000 ms
+  Write ratio:             	50 %
+  Snapshot ratio:          	0 %
+  Size:                    	1024 elements
+  Range:                   	2048 elements
+  WarmUp:                  	5 s
+  Iterations:              	1
+  Benchmark:               	soft3410.BucketLockingChainingHashTableIntSet
+-------------------------------------------------------------------------------
+Benchmark statistics
+-------------------------------------------------------------------------------
+  Throughput (ops/s):       	9901084.383123375
+  Elapsed time (s):         	5.001
+  Operations:               	49515323	( 100 %)
+    effective updates:     	12376447	( 25.00 %)
+    |--add successful:     	6188244	( 12.50 %)
+    |--remove succ.:       	6188203	( 12.50 %)
+    size successful:       	0	( 0.00 %)
+    contains succ.:        	12376447	( 25.00 %)
+    unsuccessful ops:      	24762429	( 50.01 %)
+  Final size:              	1065
+  Expected size:           	1065
+
+
+BEGGINING NEW TEST
+
+-------------------------------------------------------------------------------
+Synchrobench-java
+A benchmark-suite to evaluate synchronization techniques
+-------------------------------------------------------------------------------
+
+Benchmark parameters
+--------------------
+  Detailed stats:          	disabled
+  Number of threads:       	1
+  Duration:                	5000 ms
+  Write ratio:             	90 %
+  Snapshot ratio:          	0 %
+  Size:                    	1024 elements
+  Range:                   	2048 elements
+  WarmUp:                  	5 s
+  Iterations:              	1
+  Benchmark:               	soft3410.BucketLockingChainingHashTableIntSet
+-------------------------------------------------------------------------------
+Benchmark statistics
+-------------------------------------------------------------------------------
+  Throughput (ops/s):       	9738382.4
+  Elapsed time (s):         	5.0
+  Operations:               	48691912	( 100 %)
+    effective updates:     	21909805	( 45.00 %)
+    |--add successful:     	10954901	( 22.50 %)
+    |--remove succ.:       	10954904	( 22.50 %)
+    size successful:       	0	( 0.00 %)
+    contains succ.:        	2432024	( 4.99 %)
+    unsuccessful ops:      	24350083	( 50.01 %)
+  Final size:              	1021
+  Expected size:           	1021
+
+
+BEGGINING NEW TEST
+
+-------------------------------------------------------------------------------
+Synchrobench-java
+A benchmark-suite to evaluate synchronization techniques
+-------------------------------------------------------------------------------
+
+Benchmark parameters
+--------------------
+  Detailed stats:          	disabled
+  Number of threads:       	2
+  Duration:                	5000 ms
+  Write ratio:             	10 %
+  Snapshot ratio:          	0 %
+  Size:                    	1024 elements
+  Range:                   	2048 elements
+  WarmUp:                  	5 s
+  Iterations:              	1
+  Benchmark:               	soft3410.BucketLockingChainingHashTableIntSet
+-------------------------------------------------------------------------------
+Benchmark statistics
+-------------------------------------------------------------------------------
+  Throughput (ops/s):       	1.7446579484103177E7
+  Elapsed time (s):         	5.001
+  Operations:               	87250344	( 100 %)
+    effective updates:     	4364534	( 5.00 %)
+    |--add successful:     	2182261	( 2.50 %)
+    |--remove succ.:       	2182273	( 2.50 %)
+    size successful:       	0	( 0.00 %)
+    contains succ.:        	39246041	( 44.98 %)
+    unsuccessful ops:      	43639769	( 50.02 %)
+  Final size:              	1012
+  Expected size:           	1012
+
+
+BEGGINING NEW TEST
+
+-------------------------------------------------------------------------------
+Synchrobench-java
+A benchmark-suite to evaluate synchronization techniques
+-------------------------------------------------------------------------------
+
+Benchmark parameters
+--------------------
+  Detailed stats:          	disabled
+  Number of threads:       	2
+  Duration:                	5000 ms
+  Write ratio:             	50 %
+  Snapshot ratio:          	0 %
+  Size:                    	1024 elements
+  Range:                   	2048 elements
+  WarmUp:                  	5 s
+  Iterations:              	1
+  Benchmark:               	soft3410.BucketLockingChainingHashTableIntSet
+-------------------------------------------------------------------------------
+Benchmark statistics
+-------------------------------------------------------------------------------
+  Throughput (ops/s):       	1.3192785042991402E7
+  Elapsed time (s):         	5.001
+  Operations:               	65977118	( 100 %)
+    effective updates:     	16491565	( 25.00 %)
+    |--add successful:     	8245783	( 12.50 %)
+    |--remove succ.:       	8245782	( 12.50 %)
+    size successful:       	0	( 0.00 %)
+    contains succ.:        	16487592	( 24.99 %)
+    unsuccessful ops:      	32997961	( 50.01 %)
+  Final size:              	1025
+  Expected size:           	1025
+
+
+BEGGINING NEW TEST
+
+-------------------------------------------------------------------------------
+Synchrobench-java
+A benchmark-suite to evaluate synchronization techniques
+-------------------------------------------------------------------------------
+
+Benchmark parameters
+--------------------
+  Detailed stats:          	disabled
+  Number of threads:       	2
+  Duration:                	5000 ms
+  Write ratio:             	90 %
+  Snapshot ratio:          	0 %
+  Size:                    	1024 elements
+  Range:                   	2048 elements
+  WarmUp:                  	5 s
+  Iterations:              	1
+  Benchmark:               	soft3410.BucketLockingChainingHashTableIntSet
+-------------------------------------------------------------------------------
+Benchmark statistics
+-------------------------------------------------------------------------------
+  Throughput (ops/s):       	1.1269089182163566E7
+  Elapsed time (s):         	5.001
+  Operations:               	56356715	( 100 %)
+    effective updates:     	25359027	( 45.00 %)
+    |--add successful:     	12679508	( 22.50 %)
+    |--remove succ.:       	12679519	( 22.50 %)
+    size successful:       	0	( 0.00 %)
+    contains succ.:        	2817605	( 5.00 %)
+    unsuccessful ops:      	28180083	( 50.00 %)
+  Final size:              	1013
+  Expected size:           	1013
+
+
+BEGGINING NEW TEST
+
+-------------------------------------------------------------------------------
+Synchrobench-java
+A benchmark-suite to evaluate synchronization techniques
+-------------------------------------------------------------------------------
+
+Benchmark parameters
+--------------------
+  Detailed stats:          	disabled
+  Number of threads:       	4
+  Duration:                	5000 ms
+  Write ratio:             	10 %
+  Snapshot ratio:          	0 %
+  Size:                    	1024 elements
+  Range:                   	2048 elements
+  WarmUp:                  	5 s
+  Iterations:              	1
+  Benchmark:               	soft3410.BucketLockingChainingHashTableIntSet
+-------------------------------------------------------------------------------
+Benchmark statistics
+-------------------------------------------------------------------------------
+  Throughput (ops/s):       	2.0498967206558686E7
+  Elapsed time (s):         	5.001
+  Operations:               	102515335	( 100 %)
+    effective updates:     	5127060	( 5.00 %)
+    |--add successful:     	2563524	( 2.50 %)
+    |--remove succ.:       	2563536	( 2.50 %)
+    size successful:       	0	( 0.00 %)
+    contains succ.:        	46135684	( 45.00 %)
+    unsuccessful ops:      	51252591	( 50.00 %)
+  Final size:              	1012
+  Expected size:           	1012
+
+
+BEGGINING NEW TEST
+
+-------------------------------------------------------------------------------
+Synchrobench-java
+A benchmark-suite to evaluate synchronization techniques
+-------------------------------------------------------------------------------
+
+Benchmark parameters
+--------------------
+  Detailed stats:          	disabled
+  Number of threads:       	4
+  Duration:                	5000 ms
+  Write ratio:             	50 %
+  Snapshot ratio:          	0 %
+  Size:                    	1024 elements
+  Range:                   	2048 elements
+  WarmUp:                  	5 s
+  Iterations:              	1
+  Benchmark:               	soft3410.BucketLockingChainingHashTableIntSet
+-------------------------------------------------------------------------------
+Benchmark statistics
+-------------------------------------------------------------------------------
+  Throughput (ops/s):       	1.7402216070357785E7
+  Elapsed time (s):         	5.003
+  Operations:               	87063287	( 100 %)
+    effective updates:     	21768279	( 25.00 %)
+    |--add successful:     	10884140	( 12.50 %)
+    |--remove succ.:       	10884139	( 12.50 %)
+    size successful:       	0	( 0.00 %)
+    contains succ.:        	21765911	( 25.00 %)
+    unsuccessful ops:      	43529097	( 50.00 %)
+  Final size:              	1025
+  Expected size:           	1025
+
+
+BEGGINING NEW TEST
+
+-------------------------------------------------------------------------------
+Synchrobench-java
+A benchmark-suite to evaluate synchronization techniques
+-------------------------------------------------------------------------------
+
+Benchmark parameters
+--------------------
+  Detailed stats:          	disabled
+  Number of threads:       	4
+  Duration:                	5000 ms
+  Write ratio:             	90 %
+  Snapshot ratio:          	0 %
+  Size:                    	1024 elements
+  Range:                   	2048 elements
+  WarmUp:                  	5 s
+  Iterations:              	1
+  Benchmark:               	soft3410.BucketLockingChainingHashTableIntSet
+-------------------------------------------------------------------------------
+Benchmark statistics
+-------------------------------------------------------------------------------
+  Throughput (ops/s):       	1.5665471011595363E7
+  Elapsed time (s):         	5.002
+  Operations:               	78358686	( 100 %)
+    effective updates:     	34667523	( 44.24 %)
+    |--add successful:     	17333757	( 22.12 %)
+    |--remove succ.:       	17333766	( 22.12 %)
+    size successful:       	0	( 0.00 %)
+    contains succ.:        	3852073	( 4.92 %)
+    unsuccessful ops:      	39839090	( 50.84 %)
+  Final size:              	1015
+  Expected size:           	1015
+
+
+BEGGINING NEW TEST
+
+-------------------------------------------------------------------------------
+Synchrobench-java
+A benchmark-suite to evaluate synchronization techniques
+-------------------------------------------------------------------------------
+
+Benchmark parameters
+--------------------
+  Detailed stats:          	disabled
+  Number of threads:       	6
+  Duration:                	5000 ms
+  Write ratio:             	10 %
+  Snapshot ratio:          	0 %
+  Size:                    	1024 elements
+  Range:                   	2048 elements
+  WarmUp:                  	5 s
+  Iterations:              	1
+  Benchmark:               	soft3410.BucketLockingChainingHashTableIntSet
+-------------------------------------------------------------------------------
+Benchmark statistics
+-------------------------------------------------------------------------------
+  Throughput (ops/s):       	2.062382689243028E7
+  Elapsed time (s):         	5.02
+  Operations:               	103531611	( 100 %)
+    effective updates:     	5176825	( 5.00 %)
+    |--add successful:     	2588411	( 2.50 %)
+    |--remove succ.:       	2588414	( 2.50 %)
+    size successful:       	0	( 0.00 %)
+    contains succ.:        	46601451	( 45.01 %)
+    unsuccessful ops:      	51753335	( 49.99 %)
+  Final size:              	1021
+  Expected size:           	1021
+
+
+BEGGINING NEW TEST
+
+-------------------------------------------------------------------------------
+Synchrobench-java
+A benchmark-suite to evaluate synchronization techniques
+-------------------------------------------------------------------------------
+
+Benchmark parameters
+--------------------
+  Detailed stats:          	disabled
+  Number of threads:       	6
+  Duration:                	5000 ms
+  Write ratio:             	50 %
+  Snapshot ratio:          	0 %
+  Size:                    	1024 elements
+  Range:                   	2048 elements
+  WarmUp:                  	5 s
+  Iterations:              	1
+  Benchmark:               	soft3410.BucketLockingChainingHashTableIntSet
+-------------------------------------------------------------------------------
+Benchmark statistics
+-------------------------------------------------------------------------------
+  Throughput (ops/s):       	1.7256578758235175E7
+  Elapsed time (s):         	5.009
+  Operations:               	86438203	( 100 %)
+    effective updates:     	21260287	( 24.60 %)
+    |--add successful:     	10630124	( 12.30 %)
+    |--remove succ.:       	10630163	( 12.30 %)
+    size successful:       	0	( 0.00 %)
+    contains succ.:        	21261686	( 24.60 %)
+    unsuccessful ops:      	43916230	( 50.81 %)
+  Final size:              	985
+  Expected size:           	985
+
+
+BEGGINING NEW TEST
+
+-------------------------------------------------------------------------------
+Synchrobench-java
+A benchmark-suite to evaluate synchronization techniques
+-------------------------------------------------------------------------------
+
+Benchmark parameters
+--------------------
+  Detailed stats:          	disabled
+  Number of threads:       	6
+  Duration:                	5000 ms
+  Write ratio:             	90 %
+  Snapshot ratio:          	0 %
+  Size:                    	1024 elements
+  Range:                   	2048 elements
+  WarmUp:                  	5 s
+  Iterations:              	1
+  Benchmark:               	soft3410.BucketLockingChainingHashTableIntSet
+-------------------------------------------------------------------------------
+Benchmark statistics
+-------------------------------------------------------------------------------
+  Throughput (ops/s):       	1.5592641719745222E7
+  Elapsed time (s):         	5.024
+  Operations:               	78337432	( 100 %)
+    effective updates:     	34792912	( 44.41 %)
+    |--add successful:     	17396455	( 22.21 %)
+    |--remove succ.:       	17396457	( 22.21 %)
+    size successful:       	0	( 0.00 %)
+    contains succ.:        	3871281	( 4.94 %)
+    unsuccessful ops:      	39673239	( 50.64 %)
+  Final size:              	1022
+  Expected size:           	1022
+
+
+BEGGINING NEW TEST
+
+-------------------------------------------------------------------------------
+Synchrobench-java
+A benchmark-suite to evaluate synchronization techniques
+-------------------------------------------------------------------------------
+
+Benchmark parameters
+--------------------
+  Detailed stats:          	disabled
+  Number of threads:       	8
+  Duration:                	5000 ms
+  Write ratio:             	10 %
+  Snapshot ratio:          	0 %
+  Size:                    	1024 elements
+  Range:                   	2048 elements
+  WarmUp:                  	5 s
+  Iterations:              	1
+  Benchmark:               	soft3410.BucketLockingChainingHashTableIntSet
+-------------------------------------------------------------------------------
+Benchmark statistics
+-------------------------------------------------------------------------------
+  Throughput (ops/s):       	2.020882931686915E7
+  Elapsed time (s):         	5.021
+  Operations:               	101468532	( 100 %)
+    effective updates:     	5074037	( 5.00 %)
+    |--add successful:     	2537028	( 2.50 %)
+    |--remove succ.:       	2537009	( 2.50 %)
+    size successful:       	0	( 0.00 %)
+    contains succ.:        	45691838	( 45.03 %)
+    unsuccessful ops:      	50702657	( 49.97 %)
+  Final size:              	1043
+  Expected size:           	1043
+
+
+BEGGINING NEW TEST
+
+-------------------------------------------------------------------------------
+Synchrobench-java
+A benchmark-suite to evaluate synchronization techniques
+-------------------------------------------------------------------------------
+
+Benchmark parameters
+--------------------
+  Detailed stats:          	disabled
+  Number of threads:       	8
+  Duration:                	5000 ms
+  Write ratio:             	50 %
+  Snapshot ratio:          	0 %
+  Size:                    	1024 elements
+  Range:                   	2048 elements
+  WarmUp:                  	5 s
+  Iterations:              	1
+  Benchmark:               	soft3410.BucketLockingChainingHashTableIntSet
+-------------------------------------------------------------------------------
+Benchmark statistics
+-------------------------------------------------------------------------------
+  Throughput (ops/s):       	1.858244093078759E7
+  Elapsed time (s):         	5.028
+  Operations:               	93432513	( 100 %)
+    effective updates:     	21103983	( 22.59 %)
+    |--add successful:     	10551955	( 11.29 %)
+    |--remove succ.:       	10552028	( 11.29 %)
+    size successful:       	0	( 0.00 %)
+    contains succ.:        	21107373	( 22.59 %)
+    unsuccessful ops:      	51221157	( 54.82 %)
+  Final size:              	951
+  Expected size:           	951
+
+
+BEGGINING NEW TEST
+
+-------------------------------------------------------------------------------
+Synchrobench-java
+A benchmark-suite to evaluate synchronization techniques
+-------------------------------------------------------------------------------
+
+Benchmark parameters
+--------------------
+  Detailed stats:          	disabled
+  Number of threads:       	8
+  Duration:                	5000 ms
+  Write ratio:             	90 %
+  Snapshot ratio:          	0 %
+  Size:                    	1024 elements
+  Range:                   	2048 elements
+  WarmUp:                  	5 s
+  Iterations:              	1
+  Benchmark:               	soft3410.BucketLockingChainingHashTableIntSet
+-------------------------------------------------------------------------------
+Benchmark statistics
+-------------------------------------------------------------------------------
+  Throughput (ops/s):       	1.513820222708292E7
+  Elapsed time (s):         	5.029
+  Operations:               	76130019	( 100 %)
+    effective updates:     	33232703	( 43.65 %)
+    |--add successful:     	16616347	( 21.83 %)
+    |--remove succ.:       	16616356	( 21.83 %)
+    size successful:       	0	( 0.00 %)
+    contains succ.:        	3695599	( 4.85 %)
+    unsuccessful ops:      	39201717	( 51.49 %)
+  Final size:              	1015
+  Expected size:           	1015
+
+
+TESTS COMPLETE
+
