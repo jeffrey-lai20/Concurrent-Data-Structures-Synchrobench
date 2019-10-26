@@ -75,7 +75,7 @@ public final class FasterSkiplistIntSet
     @Override
     public int size() {
         int size = 0;
-        Node node = head.next[0].next[0];
+        Node node = head.next[0].next[0];   //Exclude count for head and tail.
 
         while (node != null) {
             node = node.next[0];
@@ -123,41 +123,32 @@ public final class FasterSkiplistIntSet
         return levelFound;
     }
 
-    private boolean validate(int level, int value, Node[] predecessors, Node[] successors) {
-        try {
-            int topLevel = level;
-            Node[] preds = (Node[]) new Node[maxLevel + 1];  //Sets of predecessors for different levels
-            Node[] succs = (Node[]) new Node[maxLevel + 1];    //Sets of successors for different levels
-
-            int levelFound = find(value, predecessors, successors);
-            //If it already exists then leave? yeah leave
-            //No don't leave, that sets predecessors and successors. Only returns -1 if nothing is filled? I think
-            //Ohh returns -1 if nothing is filled or if the value doesn't exist.
-            if (levelFound != -1) {
-                return false;
-            }
-
-            //Highest locked level? idk
-            int highestLocked = -1;
-
-            Node predecessor, successor;
-            for (int lev = 0; lev <= topLevel; lev++) {   //Go through each level (determined max of random max level)
-                predecessor = preds[lev];  //Sets predecessor as the current level's pred
-                successor = succs[lev];  //Sets successor as the current level's succ
-//            predecessor.lock();    //Lock the predecessor         Ayo might not need to lock if I be using synchronized!
-                highestLocked = lev;  //Working our way up, so the highest locked level is currently this.
-            }
-
-            for (int i = 0; i < topLevel; i++) {
-                if (preds[i].key != predecessors[i].key) return false;
-                if (succs[i].key != successors[i].key) return false;
-            }
-            return true;
-        } catch (NullPointerException e) {
-            return false;
+    public Node findPredecessor(int value, int level) {
+        int key = value;
+        Node pred = head;
+        while(pred.next[level].key < value) {
+            pred = pred.next[level];
         }
-
+        return pred;
     }
+
+    private boolean validate(int level, Node[] predecessors, Node[] successors) {
+        int topLevel = level;
+            for (int i = 0; i < topLevel; i++) {
+                Node current = findPredecessor(successors[i].key, i);
+                if (current.key == predecessors[i].key) {
+                    return predecessors[i].next[i].key == successors[i].key;
+                }
+            }
+            return false;
+    }
+//private boolean validate(int level, Node predecessor, Node successor) {
+//    Node currentPred = findPredecessor(successor.key, level);
+//    if (currentPred.next[level].key != successor.key) {
+//        return false;
+//    }
+//    return true;
+//}
 
     /**
      * Optimistic locking of addInt. Find nodes without locking, then lock nodes,
@@ -167,6 +158,11 @@ public final class FasterSkiplistIntSet
      */
     @Override
     public boolean addInt(final int value) {
+
+        /**
+         * Rip rewriting it again
+         */
+
         int topLevel = (int) Math.floor(Math.random()*maxLevel); //Might need to minus 1, but sets the random highest level for the int
         Node[] predecessors = (Node[]) new Node[maxLevel + 1];  //Sets of predecessors for different levels
         Node[] successors = (Node[]) new Node[maxLevel + 1];    //Sets of successors for different levels
@@ -178,20 +174,9 @@ public final class FasterSkiplistIntSet
 //        if (levelFound != -1) {
 //            return false;
 //        }
-
-        //Highest locked level? idk
-        int highestLocked = -1;
-
-        Node predecessor, successor;
-        for (int level = 0; level <= topLevel; level++) {   //Go through each level (determined max of random max level)
-            predecessor = predecessors[level];  //Sets predecessor as the current level's pred
-            successor = successors[level];  //Sets successor as the current level's succ
-//            predecessor.lock();    //Lock the predecessor         Ayo might not need to lock if I be using synchronized!
-            highestLocked = level;  //Working our way up, so the highest locked level is currently this.
-        }
         synchronized (predecessors) {
             synchronized (successors) {
-                if (validate(topLevel, value, predecessors, successors)) {
+                if (validate(topLevel, predecessors, successors)) {
                     //Goes through each level and sets the appropriate successor
                     Node newNode = new Node(value, topLevel);
                     for (int level = 0; level <= topLevel; level++) {
@@ -204,11 +189,6 @@ public final class FasterSkiplistIntSet
                     //After done, set fully linked as true
                     newNode.fullyLinked = true;
                     return true;
-
-                    //Might not need to unlock if I using synchronized!
-//                    for (int level = 0; level <= highestLocked; level++) {
-//                        predecessors[level].unlock();
-//                    }
                 }
             }
         }
@@ -233,16 +213,9 @@ public final class FasterSkiplistIntSet
         if (victim.fullyLinked && victim.topLevel == levelFound) {  //If the node is fully linked (preds and succs for all levels connected) and level is the same as found
             int highestLocked = -1;
             victim.lock();
-            //Might not need to lock bc synchronized
-//            Node predecessor, successor;
-//            for(int level = 0; level <= topLevel; level++) {    //Lock all the predecessors
-//                predecessor = predecessors[level];
-//                predecessor.lock();
-//                highestLocked = level;
-//            }
             synchronized (predecessors) {
                 synchronized (successors) {
-                    if (validate(levelFound, value, predecessors, successors)) {
+                    if (validate(levelFound, predecessors, successors)) {
                         //Unlink
                         for (int level = topLevel; level >= 0; level--) {
                             predecessors[level].next[level] = victim.next[level];   //set the predecessors of the victim to the victim's successors
@@ -251,9 +224,6 @@ public final class FasterSkiplistIntSet
                 }
             }
             victim.unlock();
-//            for (int i = 0; i <= highestLocked; i++) {
-//                predecessors[i].unlock();
-//            }
             return true;
         }
         return false;
