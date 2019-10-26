@@ -122,6 +122,12 @@ public final class FasterSkiplistIntSet
         return levelFound;
     }
 
+    /**
+     * Optimistic locking of addInt. Find nodes without locking, then lock nodes,
+     * and finally check that everything is okay.
+     * @param value
+     * @return
+     */
     @Override
     public boolean addInt(final int value) {
         int topLevel = randomLevel();
@@ -161,6 +167,16 @@ public final class FasterSkiplistIntSet
                     highestLocked = level;
 //                    valid = !pred.marked && !succ.marked && pred.next[level]==succ;
                 }
+
+                for (int level = 0; (level <= topLevel); level++) {
+                    pred = preds[level];
+                    succ = succs[level];
+                    if (!containsInt(pred)) return false;
+//                    pred.lock.lock();
+//                    highestLocked = level;
+//                    valid = !pred.marked && !succ.marked && pred.next[level]==succ;
+                }
+
 
                 /* Must have encountered effects of a conflicting method, so it releases (in the
                  * finally block) the locks it acquired and retries */
@@ -208,25 +224,25 @@ public final class FasterSkiplistIntSet
             }
 
             /* Ready to delete if unmarked, fully linked, and at its top level. */
-            if (isMarked | (levelFound != -1 && (victim.fullyLinked && victim.topLevel == levelFound && !victim.marked))) {
-
-                /* Acquire locks in order to logically delete. */
-                if (!isMarked) {
-                    topLevel = victim.topLevel;
-                    victim.lock.lock();
-                    if (victim.marked) {
-                        victim.lock.unlock();
-                        return false;
-                    }
-                    victim.marked = true; // logical deletion
-                    isMarked = true;
-                }
+//            if (isMarked | (levelFound != -1 && (victim.fullyLinked && victim.topLevel == levelFound && !victim.marked))) {
+//
+//                /* Acquire locks in order to logically delete. */
+//                if (!isMarked) {
+//                    topLevel = victim.topLevel;
+//                    victim.lock.lock();
+//                    if (victim.marked) {
+//                        victim.lock.unlock();
+//                        return false;
+//                    }
+//                    victim.marked = true; // logical deletion
+//                    isMarked = true;
+//                }
 
                 int highestLocked = -1;
 
                 try {
                     Node pred, succ;
-                    boolean valid = true;
+//                    boolean valid = true;
 
                     /* Acquire locks. */
                     for (int level = 0; valid && (level <= topLevel); level++) {
@@ -236,10 +252,19 @@ public final class FasterSkiplistIntSet
                         valid = !pred.marked && pred.next[level]==victim;
                     }
 
-                    /* Pred has changed and is no longer suitable, thus unlock and retries. */
-                    if (!valid) {
-                        continue;
+                    /* Acquire locks. */
+                    for (int level = 0; valid && (level <= topLevel); level++) {
+                        pred = preds[level];
+                        if (!containsInt(pred)) return false;
+//                        pred.lock.lock();
+//                        highestLocked = level;
+//                        valid = !pred.marked && pred.next[level]==victim;
                     }
+
+                    /* Pred has changed and is no longer suitable, thus unlock and retries. */
+//                    if (!valid) {
+//                        continue;
+//                    }
 
                     /* Unlink. */
                     for (int level = topLevel; level >= 0; level--) {
