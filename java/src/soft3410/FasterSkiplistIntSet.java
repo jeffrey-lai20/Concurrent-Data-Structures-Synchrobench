@@ -142,13 +142,6 @@ public final class FasterSkiplistIntSet
             }
             return false;
     }
-//private boolean validate(int level, Node predecessor, Node successor) {
-//    Node currentPred = findPredecessor(successor.key, level);
-//    if (currentPred.next[level].key != successor.key) {
-//        return false;
-//    }
-//    return true;
-//}
 
     /**
      * Optimistic locking of addInt. Find nodes without locking, then lock nodes,
@@ -158,11 +151,6 @@ public final class FasterSkiplistIntSet
      */
     @Override
     public boolean addInt(final int value) {
-
-        /**
-         * Rip rewriting it again
-         */
-
         int topLevel = (int) Math.floor(Math.random()*maxLevel); //Might need to minus 1, but sets the random highest level for the int
         Node[] predecessors = (Node[]) new Node[maxLevel + 1];  //Sets of predecessors for different levels
         Node[] successors = (Node[]) new Node[maxLevel + 1];    //Sets of successors for different levels
@@ -171,9 +159,9 @@ public final class FasterSkiplistIntSet
         //If it already exists then leave? yeah leave
         //No don't leave, that sets predecessors and successors. Only returns -1 if nothing is filled? I think
         //Ohh returns -1 if nothing is filled or if the value doesn't exist.
-//        if (levelFound != -1) {
-//            return false;
-//        }
+        if (levelFound != -1) {
+                    return false;
+            }
         synchronized (predecessors) {
             synchronized (successors) {
                 if (validate(topLevel, predecessors, successors)) {
@@ -190,41 +178,43 @@ public final class FasterSkiplistIntSet
                     newNode.fullyLinked = true;
                     return true;
                 }
+                return false;
             }
         }
-        return false;
     }
 
     @Override
     public boolean removeInt(final int value) {
-
         Node victim = null; //Victim to remove probs
         int topLevel = -1;  //Max level that victim exists at
         Node[] predecessors = (Node[]) new Node[maxLevel + 1];    //Victim's predecessors
         Node[] successors = (Node[]) new Node[maxLevel +1];   //Victim's successors
         int levelFound = find(value, predecessors, successors); //Initialize predecessors and successors
 
-        //If the level is actually found then the victim is the successor
-        if (levelFound != -1) {
-            victim = successors[levelFound];
-        } else {
-            return false;   //levelFound is -1 which means that the value isn't found.
+        //levelFound is -1 which means that the value isn't found.
+        if (levelFound == -1) {
+            return false;
         }
+        //If the level is actually found then the victim is the successor
+        victim = successors[levelFound];
+
+        topLevel = victim.topLevel;
         if (victim.fullyLinked && victim.topLevel == levelFound) {  //If the node is fully linked (preds and succs for all levels connected) and level is the same as found
-            int highestLocked = -1;
-            victim.lock();
-            synchronized (predecessors) {
-                synchronized (successors) {
-                    if (validate(levelFound, predecessors, successors)) {
-                        //Unlink
-                        for (int level = topLevel; level >= 0; level--) {
-                            predecessors[level].next[level] = victim.next[level];   //set the predecessors of the victim to the victim's successors
+//        if (victim.fullyLinked) {
+//            synchronized (victim) {
+                synchronized (predecessors) {
+                    synchronized (successors) {
+                        if (validate(levelFound, predecessors, successors)) {
+                            //Unlink
+                            for (int level = topLevel; level >= 0; level--) {
+                                predecessors[level].next[level] = victim.next[level];   //set the predecessors of the victim to the victim's successors
+                            }
+                            return true;
+
                         }
                     }
                 }
-            }
-            victim.unlock();
-            return true;
+//            }
         }
         return false;
     }
@@ -233,7 +223,6 @@ public final class FasterSkiplistIntSet
         final Lock lock = new ReentrantLock();
         final int key;
         final Node[] next;
-//        volatile boolean marked = false;
         volatile boolean fullyLinked = false;
         private int topLevel;
 
