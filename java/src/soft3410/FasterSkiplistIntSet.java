@@ -162,23 +162,26 @@ public final class FasterSkiplistIntSet
         if (levelFound != -1) {
                     return false;
             }
-        synchronized (predecessors) {
-            synchronized (successors) {
-                if (validate(topLevel, predecessors, successors)) {
-                    //Goes through each level and sets the appropriate successor
-                    Node newNode = new Node(value, topLevel);
-                    for (int level = 0; level <= topLevel; level++) {
-                        newNode.next[level] = successors[level];
+        while (true) {
+            synchronized (predecessors) {
+                synchronized (successors) {
+                    if (validate(topLevel, predecessors, successors)) {
+                        //Goes through each level and sets the appropriate successor
+                        Node newNode = new Node(value, topLevel);
+                        for (int level = 0; level <= topLevel; level++) {
+                            newNode.next[level] = successors[level];
+                        }
+                        //Goes through each level and sets the appropriate next node for the predecessors
+                        for (int level = 0; level <= topLevel; level++) {
+                            predecessors[level].next[level] = newNode;
+                        }
+                        //After done, set fully linked as true
+                        newNode.fullyLinked = true;
+                        return true;
                     }
-                    //Goes through each level and sets the appropriate next node for the predecessors
-                    for (int level = 0; level <= topLevel; level++) {
-                        predecessors[level].next[level] = newNode;
-                    }
-                    //After done, set fully linked as true
-                    newNode.fullyLinked = true;
-                    return true;
+//                    continue;
+                    return false;
                 }
-                return false;
             }
         }
     }
@@ -188,7 +191,7 @@ public final class FasterSkiplistIntSet
         Node victim = null; //Victim to remove probs
         int topLevel = -1;  //Max level that victim exists at
         Node[] predecessors = (Node[]) new Node[maxLevel + 1];    //Victim's predecessors
-        Node[] successors = (Node[]) new Node[maxLevel +1];   //Victim's successors
+        Node[] successors = (Node[]) new Node[maxLevel + 1];   //Victim's successors
         int levelFound = find(value, predecessors, successors); //Initialize predecessors and successors
 
         //levelFound is -1 which means that the value isn't found.
@@ -200,20 +203,21 @@ public final class FasterSkiplistIntSet
 
         topLevel = victim.topLevel;
         if (victim.fullyLinked && victim.topLevel == levelFound) {  //If the node is fully linked (preds and succs for all levels connected) and level is the same as found
-//        if (victim.fullyLinked) {
-//            synchronized (victim) {
-                synchronized (predecessors) {
-                    synchronized (successors) {
-                        if (validate(levelFound, predecessors, successors)) {
-                            //Unlink
-                            for (int level = topLevel; level >= 0; level--) {
-                                predecessors[level].next[level] = victim.next[level];   //set the predecessors of the victim to the victim's successors
-                            }
-                            return true;
+//            if (victim.fullyLinked) {
+//                synchronized (victim) {
+                    synchronized (predecessors) {
+                        synchronized (successors) {
+                            if (validate(levelFound, predecessors, successors)) {
+                                //Unlink
+                                for (int level = topLevel; level >= 0; level--) {
+                                    predecessors[level].next[level] = victim.next[level];   //set the predecessors of the victim to the victim's successors
+                                }
+                                return true;
 
+                            }
                         }
                     }
-                }
+//                }
 //            }
         }
         return false;
