@@ -14,6 +14,8 @@ public class CoarseGrainedSkiplistIntSet
     final private int maxIndex;
     final public Node head;
     final public Node tail;
+    private static transient int randomSeed = new Random().nextInt() | 0x0100;
+
 
     public CoarseGrainedSkiplistIntSet() {
         this.maxIndex = 100;
@@ -22,6 +24,23 @@ public class CoarseGrainedSkiplistIntSet
         for (int i = 0; i <= maxIndex; i++) {
             head.setNext(i, tail);
         }
+    }
+
+    public static int randomLeveler() {
+        int x = randomSeed;
+        x ^= x << 13;
+        x ^= x >>17;
+        randomSeed = x ^= x <<5;
+        if ((x & 0x80000001) != 0)
+            return 0;
+        int level = 1;
+        while (((x >>>= 1) & 1) != 0)
+            ++level;
+        return level;
+    }
+
+    private int randomLevel() {
+        return Math.min((maxIndex - 1), (randomLeveler()));
     }
 
     public synchronized boolean addInt(int value) {
@@ -40,7 +59,8 @@ public class CoarseGrainedSkiplistIntSet
         if (curr.getValue() == value) {
             return false;
         } else {
-            int level = (int) Math.floor(Math.random()*maxIndex); //might need to minus 1
+//            int level = (int) Math.floor(Math.random()*maxIndex); //might need to minus 1
+            int level = randomLevel();
             curr = new Node(level, value);
             for (int i = 0; i <= level; i++) {
                 curr.setNext(i, update[i].getNext(i));

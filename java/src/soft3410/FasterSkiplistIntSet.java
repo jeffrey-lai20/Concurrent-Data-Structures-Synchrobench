@@ -59,6 +59,7 @@ public final class FasterSkiplistIntSet
         return Math.min((maxLevel - 1), (randomLeveler()));
     }
 
+
     public FasterSkiplistIntSet() {
         this(31);
     }
@@ -151,7 +152,8 @@ public final class FasterSkiplistIntSet
      */
     @Override
     public boolean addInt(final int value) {
-        int topLevel = (int) Math.floor(Math.random()*maxLevel); //Might need to minus 1, but sets the random highest level for the int
+//        int topLevel = (int) Math.floor(Math.random()*maxLevel); //Might need to minus 1, but sets the random highest level for the int
+        int topLevel = randomLevel();
         Node[] predecessors = (Node[]) new Node[maxLevel + 1];  //Sets of predecessors for different levels
         Node[] successors = (Node[]) new Node[maxLevel + 1];    //Sets of successors for different levels
 
