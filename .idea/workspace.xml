@@ -2,14 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="58103b7f-e429-4bac-b05e-be232f35c138" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/java/CoarseGrainedSkiplistIntSet.txt" beforeDir="false" afterPath="$PROJECT_DIR$/java/CoarseGrainedSkiplistIntSet.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/java/FasterSkiplistIntSet.txt" beforeDir="false" afterPath="$PROJECT_DIR$/java/FasterSkiplistIntSet.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/bin/soft3410/CoarseGrainedSkiplistIntSet.class" beforeDir="false" afterPath="$PROJECT_DIR$/java/bin/soft3410/CoarseGrainedSkiplistIntSet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/bin/soft3410/FasterSkiplistIntSet.class" beforeDir="false" afterPath="$PROJECT_DIR$/java/bin/soft3410/FasterSkiplistIntSet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/java/bin/soft3410/SkiplistIntSet$Node.class" beforeDir="false" afterPath="$PROJECT_DIR$/java/bin/soft3410/SkiplistIntSet$Node.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/java/bin/soft3410/SkiplistIntSet.class" beforeDir="false" afterPath="$PROJECT_DIR$/java/bin/soft3410/SkiplistIntSet.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/java/lib/compositional-deucestm-0.1.jar" beforeDir="false" afterPath="$PROJECT_DIR$/java/lib/compositional-deucestm-0.1.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java/src/soft3410/CoarseGrainedSkiplistIntSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/src/soft3410/CoarseGrainedSkiplistIntSet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/java/src/soft3410/FasterSkiplistIntSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/src/soft3410/FasterSkiplistIntSet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/java/src/soft3410/SkiplistIntSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/src/soft3410/SkiplistIntSet.java" afterDir="false" />
     </list>
@@ -24,6 +22,7 @@
   </component>
   <component name="ProjectId" id="1RPmCaVbdcIXKQzxhPEYjaUHRPn" />
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />

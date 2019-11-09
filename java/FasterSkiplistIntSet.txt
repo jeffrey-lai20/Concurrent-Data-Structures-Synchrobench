@@ -18,17 +18,17 @@ Benchmark parameters
 -------------------------------------------------------------------------------
 Benchmark statistics
 -------------------------------------------------------------------------------
-  Throughput (ops/s):       	1952740.0
+  Throughput (ops/s):       	2085281.8
   Elapsed time (s):         	5.0
-  Operations:               	9763700	( 100 %)
-    effective updates:     	196717	( 2.01 %)
-    |--add successful:     	98047	( 1.00 %)
-    |--remove succ.:       	98670	( 1.01 %)
+  Operations:               	10426409	( 100 %)
+    effective updates:     	208557	( 2.00 %)
+    |--add successful:     	103966	( 1.00 %)
+    |--remove succ.:       	104591	( 1.00 %)
     size successful:       	0	( 0.00 %)
-    contains succ.:        	1762429	( 18.05 %)
-    unsuccessful ops:      	7804554	( 79.93 %)
-  Final size:              	401
-  Expected size:           	401
+    contains succ.:        	1884362	( 18.07 %)
+    unsuccessful ops:      	8333490	( 79.93 %)
+  Final size:              	399
+  Expected size:           	399
 
 
 BEGGINING NEW TEST
@@ -53,17 +53,17 @@ Benchmark parameters
 -------------------------------------------------------------------------------
 Benchmark statistics
 -------------------------------------------------------------------------------
-  Throughput (ops/s):       	1253578.4
-  Elapsed time (s):         	5.0
-  Operations:               	6267892	( 100 %)
-    effective updates:     	625914	( 9.99 %)
-    |--add successful:     	312643	( 4.99 %)
-    |--remove succ.:       	313271	( 5.00 %)
+  Throughput (ops/s):       	1259831.4337132573
+  Elapsed time (s):         	5.001
+  Operations:               	6300417	( 100 %)
+    effective updates:     	630270	( 10.00 %)
+    |--add successful:     	314831	( 5.00 %)
+    |--remove succ.:       	315439	( 5.01 %)
     size successful:       	0	( 0.00 %)
-    contains succ.:        	628191	( 10.02 %)
-    unsuccessful ops:      	5013787	( 79.99 %)
-  Final size:              	396
-  Expected size:           	396
+    contains succ.:        	630242	( 10.00 %)
+    unsuccessful ops:      	5039905	( 79.99 %)
+  Final size:              	416
+  Expected size:           	416
 
 
 BEGGINING NEW TEST
@@ -88,17 +88,17 @@ Benchmark parameters
 -------------------------------------------------------------------------------
 Benchmark statistics
 -------------------------------------------------------------------------------
-  Throughput (ops/s):       	947233.0
+  Throughput (ops/s):       	958801.0
   Elapsed time (s):         	5.0
-  Operations:               	4736165	( 100 %)
-    effective updates:     	854258	( 18.04 %)
-    |--add successful:     	426830	( 9.01 %)
-    |--remove succ.:       	427428	( 9.02 %)
+  Operations:               	4794005	( 100 %)
+    effective updates:     	863291	( 18.01 %)
+    |--add successful:     	431349	( 9.00 %)
+    |--remove succ.:       	431942	( 9.01 %)
     size successful:       	0	( 0.00 %)
-    contains succ.:        	95206	( 2.01 %)
-    unsuccessful ops:      	3786701	( 79.95 %)
-  Final size:              	426
-  Expected size:           	426
+    contains succ.:        	95840	( 2.00 %)
+    unsuccessful ops:      	3834874	( 79.99 %)
+  Final size:              	431
+  Expected size:           	431
 
 
 BEGGINING NEW TEST
@@ -123,17 +123,17 @@ Benchmark parameters
 -------------------------------------------------------------------------------
 Benchmark statistics
 -------------------------------------------------------------------------------
-  Throughput (ops/s):       	3795861.427714457
+  Throughput (ops/s):       	3778379.9240151965
   Elapsed time (s):         	5.001
-  Operations:               	18983103	( 100 %)
-    effective updates:     	368565	( 1.94 %)
-    |--add successful:     	183977	( 0.97 %)
-    |--remove succ.:       	184588	( 0.97 %)
+  Operations:               	18895678	( 100 %)
+    effective updates:     	370831	( 1.96 %)
+    |--add successful:     	185116	( 0.98 %)
+    |--remove succ.:       	185715	( 0.98 %)
     size successful:       	0	( 0.00 %)
-    contains succ.:        	3704964	( 19.52 %)
-    unsuccessful ops:      	14909574	( 78.54 %)
-  Final size:              	439
-  Expected size:           	413
+    contains succ.:        	3641760	( 19.27 %)
+    unsuccessful ops:      	14883087	( 78.76 %)
+  Final size:              	435
+  Expected size:           	425
 
 
 BEGGINING NEW TEST
@@ -158,17 +158,17 @@ Benchmark parameters
 -------------------------------------------------------------------------------
 Benchmark statistics
 -------------------------------------------------------------------------------
-  Throughput (ops/s):       	2190390.5218956205
+  Throughput (ops/s):       	2221820.6358728255
   Elapsed time (s):         	5.001
-  Operations:               	10954143	( 100 %)
-    effective updates:     	889247	( 8.12 %)
-    |--add successful:     	444395	( 4.06 %)
-    |--remove succ.:       	444852	( 4.06 %)
+  Operations:               	11111325	( 100 %)
+    effective updates:     	941931	( 8.48 %)
+    |--add successful:     	470735	( 4.24 %)
+    |--remove succ.:       	471196	( 4.24 %)
     size successful:       	0	( 0.00 %)
-    contains succ.:        	1490844	( 13.61 %)
-    unsuccessful ops:      	8574052	( 78.27 %)
-  Final size:              	641
-  Expected size:           	567
+    contains succ.:        	1596020	( 14.36 %)
+    unsuccessful ops:      	8573374	( 77.16 %)
+  Final size:              	659
+  Expected size:           	563
 
 
 BEGGINING NEW TEST
@@ -193,17 +193,17 @@ Benchmark parameters
 -------------------------------------------------------------------------------
 Benchmark statistics
 -------------------------------------------------------------------------------
-  Throughput (ops/s):       	1635931.0
-  Elapsed time (s):         	5.0
-  Operations:               	8179655	( 100 %)
-    effective updates:     	1189884	( 14.55 %)
-    |--add successful:     	594710	( 7.27 %)
-    |--remove succ.:       	595174	( 7.28 %)
+  Throughput (ops/s):       	1586503.49930014
+  Elapsed time (s):         	5.001
+  Operations:               	7934104	( 100 %)
+    effective updates:     	1125275	( 14.18 %)
+    |--add successful:     	562429	( 7.09 %)
+    |--remove succ.:       	562846	( 7.09 %)
     size successful:       	0	( 0.00 %)
-    contains succ.:        	247811	( 3.03 %)
-    unsuccessful ops:      	6741960	( 82.42 %)
-  Final size:              	692
-  Expected size:           	560
+    contains succ.:        	246935	( 3.11 %)
+    unsuccessful ops:      	6561894	( 82.70 %)
+  Final size:              	714
+  Expected size:           	607
 
 
 BEGGINING NEW TEST
@@ -228,17 +228,17 @@ Benchmark parameters
 -------------------------------------------------------------------------------
 Benchmark statistics
 -------------------------------------------------------------------------------
-  Throughput (ops/s):       	4803899.02019596
+  Throughput (ops/s):       	4923102.579484103
   Elapsed time (s):         	5.001
-  Operations:               	24024299	( 100 %)
-    effective updates:     	451586	( 1.88 %)
-    |--add successful:     	225532	( 0.94 %)
-    |--remove succ.:       	226054	( 0.94 %)
+  Operations:               	24620436	( 100 %)
+    effective updates:     	463226	( 1.88 %)
+    |--add successful:     	231319	( 0.94 %)
+    |--remove succ.:       	231907	( 0.94 %)
     size successful:       	0	( 0.00 %)
-    contains succ.:        	5075621	( 21.13 %)
-    unsuccessful ops:      	18497092	( 76.99 %)
-  Final size:              	511
-  Expected size:           	502
+    contains succ.:        	5041895	( 20.48 %)
+    unsuccessful ops:      	19115315	( 77.64 %)
+  Final size:              	506
+  Expected size:           	436
 
 
 BEGGINING NEW TEST
@@ -263,17 +263,17 @@ Benchmark parameters
 -------------------------------------------------------------------------------
 Benchmark statistics
 -------------------------------------------------------------------------------
-  Throughput (ops/s):       	2952121.9756048787
+  Throughput (ops/s):       	3031907.8184363125
   Elapsed time (s):         	5.001
-  Operations:               	14763562	( 100 %)
-    effective updates:     	1028112	( 6.96 %)
-    |--add successful:     	513865	( 3.48 %)
-    |--remove succ.:       	514247	( 3.48 %)
+  Operations:               	15162571	( 100 %)
+    effective updates:     	1070193	( 7.06 %)
+    |--add successful:     	534898	( 3.53 %)
+    |--remove succ.:       	535295	( 3.53 %)
     size successful:       	0	( 0.00 %)
-    contains succ.:        	2708287	( 18.34 %)
-    unsuccessful ops:      	11027163	( 74.69 %)
-  Final size:              	851
-  Expected size:           	642
+    contains succ.:        	2885239	( 19.03 %)
+    unsuccessful ops:      	11207139	( 73.91 %)
+  Final size:              	881
+  Expected size:           	627
 
 
 BEGGINING NEW TEST
@@ -298,17 +298,17 @@ Benchmark parameters
 -------------------------------------------------------------------------------
 Benchmark statistics
 -------------------------------------------------------------------------------
-  Throughput (ops/s):       	2449341.931613677
+  Throughput (ops/s):       	2309871.025794841
   Elapsed time (s):         	5.001
-  Operations:               	12249159	( 100 %)
-    effective updates:     	1319987	( 10.78 %)
-    |--add successful:     	659790	( 5.39 %)
-    |--remove succ.:       	660197	( 5.39 %)
+  Operations:               	11551665	( 100 %)
+    effective updates:     	1271670	( 11.01 %)
+    |--add successful:     	635623	( 5.50 %)
+    |--remove succ.:       	636047	( 5.51 %)
     size successful:       	0	( 0.00 %)
-    contains succ.:        	567465	( 4.63 %)
-    unsuccessful ops:      	10361707	( 84.59 %)
-  Final size:              	1039
-  Expected size:           	617
+    contains succ.:        	497604	( 4.31 %)
+    unsuccessful ops:      	9782391	( 84.68 %)
+  Final size:              	939
+  Expected size:           	600
 
 
 BEGGINING NEW TEST
@@ -333,52 +333,52 @@ Benchmark parameters
 -------------------------------------------------------------------------------
 Benchmark statistics
 -------------------------------------------------------------------------------
-  Throughput (ops/s):       	4429182.77855292
+  Throughput (ops/s):       	4827176.938369781
+  Elapsed time (s):         	5.03
+  Operations:               	24280700	( 100 %)
+    effective updates:     	442441	( 1.82 %)
+    |--add successful:     	220917	( 0.91 %)
+    |--remove succ.:       	221524	( 0.91 %)
+    size successful:       	0	( 0.00 %)
+    contains succ.:        	5142441	( 21.18 %)
+    unsuccessful ops:      	18695818	( 77.00 %)
+  Final size:              	481
+  Expected size:           	417
+
+
+BEGGINING NEW TEST
+
+-------------------------------------------------------------------------------
+Synchrobench-java
+A benchmark-suite to evaluate synchronization techniques
+-------------------------------------------------------------------------------
+
+Benchmark parameters
+--------------------
+  Detailed stats:          	disabled
+  Number of threads:       	6
+  Duration:                	5000 ms
+  Write ratio:             	50 %
+  Snapshot ratio:          	0 %
+  Size:                    	1024 elements
+  Range:                   	2048 elements
+  WarmUp:                  	5 s
+  Iterations:              	1
+  Benchmark:               	soft3410.FasterSkiplistIntSet
+-------------------------------------------------------------------------------
+Benchmark statistics
+-------------------------------------------------------------------------------
+  Throughput (ops/s):       	3129655.7703807056
   Elapsed time (s):         	5.017
-  Operations:               	22221210	( 100 %)
-    effective updates:     	405281	( 1.82 %)
-    |--add successful:     	202354	( 0.91 %)
-    |--remove succ.:       	202927	( 0.91 %)
+  Operations:               	15701483	( 100 %)
+    effective updates:     	1064218	( 6.78 %)
+    |--add successful:     	531892	( 3.39 %)
+    |--remove succ.:       	532326	( 3.39 %)
     size successful:       	0	( 0.00 %)
-    contains succ.:        	4701161	( 21.16 %)
-    unsuccessful ops:      	17114768	( 77.02 %)
-  Final size:              	497
-  Expected size:           	451
-
-
-BEGGINING NEW TEST
-
--------------------------------------------------------------------------------
-Synchrobench-java
-A benchmark-suite to evaluate synchronization techniques
--------------------------------------------------------------------------------
-
-Benchmark parameters
---------------------
-  Detailed stats:          	disabled
-  Number of threads:       	6
-  Duration:                	5000 ms
-  Write ratio:             	50 %
-  Snapshot ratio:          	0 %
-  Size:                    	1024 elements
-  Range:                   	2048 elements
-  WarmUp:                  	5 s
-  Iterations:              	1
-  Benchmark:               	soft3410.FasterSkiplistIntSet
--------------------------------------------------------------------------------
-Benchmark statistics
--------------------------------------------------------------------------------
-  Throughput (ops/s):       	2831360.286795459
-  Elapsed time (s):         	5.021
-  Operations:               	14216260	( 100 %)
-    effective updates:     	1015877	( 7.15 %)
-    |--add successful:     	507738	( 3.57 %)
-    |--remove succ.:       	508139	( 3.57 %)
-    size successful:       	0	( 0.00 %)
-    contains succ.:        	2666766	( 18.76 %)
-    unsuccessful ops:      	10533617	( 74.10 %)
-  Final size:              	836
-  Expected size:           	623
+    contains succ.:        	3082911	( 19.63 %)
+    unsuccessful ops:      	11554354	( 73.59 %)
+  Final size:              	879
+  Expected size:           	590
 
 
 BEGGINING NEW TEST
@@ -403,17 +403,17 @@ Benchmark parameters
 -------------------------------------------------------------------------------
 Benchmark statistics
 -------------------------------------------------------------------------------
-  Throughput (ops/s):       	2247058.7181528662
-  Elapsed time (s):         	5.024
-  Operations:               	11289223	( 100 %)
-    effective updates:     	1212362	( 10.74 %)
-    |--add successful:     	606035	( 5.37 %)
-    |--remove succ.:       	606327	( 5.37 %)
+  Throughput (ops/s):       	2570149.621965778
+  Elapsed time (s):         	5.026
+  Operations:               	12917572	( 100 %)
+    effective updates:     	1389874	( 10.76 %)
+    |--add successful:     	694779	( 5.38 %)
+    |--remove succ.:       	695095	( 5.38 %)
     size successful:       	0	( 0.00 %)
-    contains succ.:        	524962	( 4.65 %)
-    unsuccessful ops:      	9551899	( 84.61 %)
-  Final size:              	1031
-  Expected size:           	732
+    contains succ.:        	585289	( 4.53 %)
+    unsuccessful ops:      	10942409	( 84.71 %)
+  Final size:              	981
+  Expected size:           	708
 
 
 BEGGINING NEW TEST
@@ -438,17 +438,17 @@ Benchmark parameters
 -------------------------------------------------------------------------------
 Benchmark statistics
 -------------------------------------------------------------------------------
-  Throughput (ops/s):       	4392444.400553032
-  Elapsed time (s):         	5.063
-  Operations:               	22238946	( 100 %)
-    effective updates:     	413623	( 1.86 %)
-    |--add successful:     	206541	( 0.93 %)
-    |--remove succ.:       	207082	( 0.93 %)
+  Throughput (ops/s):       	4845067.46031746
+  Elapsed time (s):         	5.04
+  Operations:               	24419140	( 100 %)
+    effective updates:     	451242	( 1.85 %)
+    |--add successful:     	225362	( 0.92 %)
+    |--remove succ.:       	225880	( 0.93 %)
     size successful:       	0	( 0.00 %)
-    contains succ.:        	4677144	( 21.03 %)
-    unsuccessful ops:      	17148179	( 77.11 %)
-  Final size:              	530
-  Expected size:           	483
+    contains succ.:        	5168408	( 21.17 %)
+    unsuccessful ops:      	18799490	( 76.99 %)
+  Final size:              	518
+  Expected size:           	506
 
 
 BEGGINING NEW TEST
@@ -473,17 +473,17 @@ Benchmark parameters
 -------------------------------------------------------------------------------
 Benchmark statistics
 -------------------------------------------------------------------------------
-  Throughput (ops/s):       	3112226.343979369
-  Elapsed time (s):         	5.041
-  Operations:               	15688733	( 100 %)
-    effective updates:     	1064066	( 6.78 %)
-    |--add successful:     	531846	( 3.39 %)
-    |--remove succ.:       	532220	( 3.39 %)
+  Throughput (ops/s):       	3098327.193503664
+  Elapsed time (s):         	5.049
+  Operations:               	15643454	( 100 %)
+    effective updates:     	1091305	( 6.98 %)
+    |--add successful:     	545450	( 3.49 %)
+    |--remove succ.:       	545855	( 3.49 %)
     size successful:       	0	( 0.00 %)
-    contains succ.:        	2994772	( 19.09 %)
-    unsuccessful ops:      	11629895	( 74.13 %)
-  Final size:              	882
-  Expected size:           	650
+    contains succ.:        	3018729	( 19.30 %)
+    unsuccessful ops:      	11533420	( 73.73 %)
+  Final size:              	880
+  Expected size:           	619
 
 
 BEGGINING NEW TEST
@@ -508,17 +508,17 @@ Benchmark parameters
 -------------------------------------------------------------------------------
 Benchmark statistics
 -------------------------------------------------------------------------------
-  Throughput (ops/s):       	2287526.190946827
-  Elapsed time (s):         	5.059
-  Operations:               	11572595	( 100 %)
-    effective updates:     	1296559	( 11.20 %)
-    |--add successful:     	648141	( 5.60 %)
-    |--remove succ.:       	648418	( 5.60 %)
+  Throughput (ops/s):       	2106065.83382907
+  Elapsed time (s):         	5.043
+  Operations:               	10620890	( 100 %)
+    effective updates:     	1193217	( 11.23 %)
+    |--add successful:     	596421	( 5.62 %)
+    |--remove succ.:       	596796	( 5.62 %)
     size successful:       	0	( 0.00 %)
-    contains succ.:        	518886	( 4.48 %)
-    unsuccessful ops:      	9757150	( 84.31 %)
-  Final size:              	1036
-  Expected size:           	747
+    contains succ.:        	462441	( 4.35 %)
+    unsuccessful ops:      	8965232	( 84.41 %)
+  Final size:              	939
+  Expected size:           	649
 
 
 TESTS COMPLETE

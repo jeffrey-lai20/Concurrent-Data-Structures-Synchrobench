@@ -164,7 +164,7 @@ public final class FasterSkiplistIntSet
         if (levelFound != -1) {
                     return false;
             }
-        while (true) {
+//        while (true) {
             synchronized (predecessors) {
                 synchronized (successors) {
                     if (validate(topLevel, predecessors, successors)) {
@@ -185,7 +185,7 @@ public final class FasterSkiplistIntSet
                     return false;
                 }
             }
-        }
+//        }
     }
 
     @Override
