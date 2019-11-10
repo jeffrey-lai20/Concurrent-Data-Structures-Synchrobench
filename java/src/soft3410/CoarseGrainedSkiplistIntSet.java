@@ -1,3 +1,14 @@
+/*
+ *  Based on example code from:
+ *  "The Art of Multiprocessor Programming"
+ *  M. Herlihy, N. SHavit
+ *  chapter 14.3, 2008,
+ *  https://github.com/gramoli/synchrobench/blob/master/java/src/skiplists/sequential/SequentialSkipListIntSet.java,
+ *  and
+ *  https://github.com/gramoli/synchrobench/blob/master/java/src/skiplists/RandomLevelGenerator.java
+ *  by Vincent Gramoli.
+ */
+
 package soft3410;
 
 import java.util.Collection;

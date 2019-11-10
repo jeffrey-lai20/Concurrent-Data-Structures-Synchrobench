@@ -1,16 +1,12 @@
 /*
- * Algorithm:
- *   Fine-grained locking skip list.
- *   "A Simple Optimistic Skiplist Algorithm"
- *   M. Herlihy, Y. Lev, V. Luchangco, N. Shavit
- *   p.124-138, SIROCCO 2007
- *
- * Code:
  *  Based on example code from:
  *  "The Art of Multiprocessor Programming"
  *  M. Herlihy, N. SHavit
- *  chapter 14.3, 2008
- *
+ *  chapter 14.3, 2008,
+ *  https://github.com/gramoli/synchrobench/blob/master/java/src/skiplists/lockbased/LazySkipList.java,
+ *  and
+ *  https://github.com/gramoli/synchrobench/blob/master/java/src/skiplists/RandomLevelGenerator.java
+ *  by Vincent Gramoli.
  */
 
 package soft3410;
@@ -137,7 +133,8 @@ public final class FasterSkiplistIntSet
         while (true) {
             /* Call find() to initialize preds and succs. */
             int levelFound = find(value, preds, succs);
-
+            
+//
             /* If an node is found that is unmarked then return false. */
 //            if (levelFound != -1) {
 //                Node nodeFound = succs[levelFound];

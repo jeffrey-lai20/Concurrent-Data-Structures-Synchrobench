@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="58103b7f-e429-4bac-b05e-be232f35c138" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/src/soft3410/CoarseGrainedSkiplistIntSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/src/soft3410/CoarseGrainedSkiplistIntSet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/java/src/soft3410/FasterSkiplistIntSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/src/soft3410/FasterSkiplistIntSet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java/src/soft3410/SkiplistIntSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/java/src/soft3410/SkiplistIntSet.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -19,7 +20,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Original Codebase A" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -52,7 +53,11 @@
       <option name="presentableId" value="Default" />
       <updated>1569576978999</updated>
       <workItem from="1572007578994" duration="762000" />
-      <workItem from="1572047066783" duration="3652000" />
+      <workItem from="1572047066783" duration="3918000" />
+      <workItem from="1572151869170" duration="457000" />
+      <workItem from="1573052791990" duration="273000" />
+      <workItem from="1573112090978" duration="291000" />
+      <workItem from="1573340451728" duration="2407000" />
     </task>
     <servers />
   </component>
