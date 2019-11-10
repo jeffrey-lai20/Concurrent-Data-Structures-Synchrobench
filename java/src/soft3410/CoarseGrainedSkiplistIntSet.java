@@ -34,7 +34,7 @@ public class CoarseGrainedSkiplistIntSet
     private static transient int randomSeed = new Random().nextInt() | 0x0100;
 
     public CoarseGrainedSkiplistIntSet() {
-        this.maxIndex = 100;
+        this.maxIndex = 31;
         this.head = new Node(maxIndex, Integer.MIN_VALUE);
         this.tail = new Node(maxIndex, Integer.MAX_VALUE);
         for (int i = 0; i <= maxIndex; i++) {

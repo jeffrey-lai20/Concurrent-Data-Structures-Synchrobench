@@ -70,9 +70,9 @@ public final class FasterSkiplistIntSet
     }
 
     public FasterSkiplistIntSet() {
+        this.maxLevel = 31;
         this.head = new Node(Integer.MIN_VALUE, maxLevel);
         this.tail = new Node(Integer.MAX_VALUE, maxLevel);
-        this.maxLevel = 100;
         for (int i = 0; i <= maxLevel; i++) {
             head.next[i] = tail;
         }
