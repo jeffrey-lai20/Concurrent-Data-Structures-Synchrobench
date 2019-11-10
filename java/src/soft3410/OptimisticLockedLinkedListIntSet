@@ -119,7 +119,7 @@ public class OptimisticLockedLinkedListIntSet
         while (true) {
             // Found a match, so return the predecessor
             if (curr.value >= value) {
-                return predecessor;
+                return predecessor;a spinlock is a lock which causes a thread trying to acquire it to simply wait in a loop while repeatedly checking if the lock is available
             }
             predecessor = curr;
             curr = curr.getNext();

@@ -1,0 +1,525 @@
+-------------------------------------------------------------------------------
+Synchrobench-java
+A benchmark-suite to evaluate synchronization techniques
+-------------------------------------------------------------------------------
+
+Benchmark parameters
+--------------------
+  Detailed stats:          	disabled
+  Number of threads:       	1
+  Duration:                	5000 ms
+  Write ratio:             	10 %
+  Snapshot ratio:          	0 %
+  Size:                    	1024 elements
+  Range:                   	2048 elements
+  WarmUp:                  	5 s
+  Iterations:              	1
+  Benchmark:               	soft3410.CoarseGrainedSkiplistIntSet
+-------------------------------------------------------------------------------
+Benchmark statistics
+-------------------------------------------------------------------------------
+  Throughput (ops/s):       	2707297.6
+  Elapsed time (s):         	5.0
+  Operations:               	13536488	( 100 %)
+    effective updates:     	676664	( 5.00 %)
+    |--add successful:     	338344	( 2.50 %)
+    |--remove succ.:       	338320	( 2.50 %)
+    size successful:       	0	( 0.00 %)
+    contains succ.:        	6100394	( 45.07 %)
+    unsuccessful ops:      	6759430	( 49.93 %)
+  Final size:              	1048
+  Expected size:           	1048
+
+
+BEGGINING NEW TEST
+
+-------------------------------------------------------------------------------
+Synchrobench-java
+A benchmark-suite to evaluate synchronization techniques
+-------------------------------------------------------------------------------
+
+Benchmark parameters
+--------------------
+  Detailed stats:          	disabled
+  Number of threads:       	1
+  Duration:                	5000 ms
+  Write ratio:             	50 %
+  Snapshot ratio:          	0 %
+  Size:                    	1024 elements
+  Range:                   	2048 elements
+  WarmUp:                  	5 s
+  Iterations:              	1
+  Benchmark:               	soft3410.CoarseGrainedSkiplistIntSet
+-------------------------------------------------------------------------------
+Benchmark statistics
+-------------------------------------------------------------------------------
+  Throughput (ops/s):       	2091710.6
+  Elapsed time (s):         	5.0
+  Operations:               	10458553	( 100 %)
+    effective updates:     	2614672	( 25.00 %)
+    |--add successful:     	1307337	( 12.50 %)
+    |--remove succ.:       	1307335	( 12.50 %)
+    size successful:       	0	( 0.00 %)
+    contains succ.:        	2614206	( 25.00 %)
+    unsuccessful ops:      	5229675	( 50.00 %)
+  Final size:              	1026
+  Expected size:           	1026
+
+
+BEGGINING NEW TEST
+
+-------------------------------------------------------------------------------
+Synchrobench-java
+A benchmark-suite to evaluate synchronization techniques
+-------------------------------------------------------------------------------
+
+Benchmark parameters
+--------------------
+  Detailed stats:          	disabled
+  Number of threads:       	1
+  Duration:                	5000 ms
+  Write ratio:             	90 %
+  Snapshot ratio:          	0 %
+  Size:                    	1024 elements
+  Range:                   	2048 elements
+  WarmUp:                  	5 s
+  Iterations:              	1
+  Benchmark:               	soft3410.CoarseGrainedSkiplistIntSet
+-------------------------------------------------------------------------------
+Benchmark statistics
+-------------------------------------------------------------------------------
+  Throughput (ops/s):       	1740526.6946610676
+  Elapsed time (s):         	5.001
+  Operations:               	8704374	( 100 %)
+    effective updates:     	3916315	( 44.99 %)
+    |--add successful:     	1958160	( 22.50 %)
+    |--remove succ.:       	1958155	( 22.50 %)
+    size successful:       	0	( 0.00 %)
+    contains succ.:        	436206	( 5.01 %)
+    unsuccessful ops:      	4351853	( 50.00 %)
+  Final size:              	1029
+  Expected size:           	1029
+
+
+BEGGINING NEW TEST
+
+-------------------------------------------------------------------------------
+Synchrobench-java
+A benchmark-suite to evaluate synchronization techniques
+-------------------------------------------------------------------------------
+
+Benchmark parameters
+--------------------
+  Detailed stats:          	disabled
+  Number of threads:       	2
+  Duration:                	5000 ms
+  Write ratio:             	10 %
+  Snapshot ratio:          	0 %
+  Size:                    	1024 elements
+  Range:                   	2048 elements
+  WarmUp:                  	5 s
+  Iterations:              	1
+  Benchmark:               	soft3410.CoarseGrainedSkiplistIntSet
+-------------------------------------------------------------------------------
+Benchmark statistics
+-------------------------------------------------------------------------------
+  Throughput (ops/s):       	1560413.8
+  Elapsed time (s):         	5.0
+  Operations:               	7802069	( 100 %)
+    effective updates:     	389995	( 5.00 %)
+    |--add successful:     	194997	( 2.50 %)
+    |--remove succ.:       	194998	( 2.50 %)
+    size successful:       	0	( 0.00 %)
+    contains succ.:        	3511108	( 45.00 %)
+    unsuccessful ops:      	3900966	( 50.00 %)
+  Final size:              	1023
+  Expected size:           	1023
+
+
+BEGGINING NEW TEST
+
+-------------------------------------------------------------------------------
+Synchrobench-java
+A benchmark-suite to evaluate synchronization techniques
+-------------------------------------------------------------------------------
+
+Benchmark parameters
+--------------------
+  Detailed stats:          	disabled
+  Number of threads:       	2
+  Duration:                	5000 ms
+  Write ratio:             	50 %
+  Snapshot ratio:          	0 %
+  Size:                    	1024 elements
+  Range:                   	2048 elements
+  WarmUp:                  	5 s
+  Iterations:              	1
+  Benchmark:               	soft3410.CoarseGrainedSkiplistIntSet
+-------------------------------------------------------------------------------
+Benchmark statistics
+-------------------------------------------------------------------------------
+  Throughput (ops/s):       	1223974.0
+  Elapsed time (s):         	5.0
+  Operations:               	6119870	( 100 %)
+    effective updates:     	1530381	( 25.01 %)
+    |--add successful:     	765184	( 12.50 %)
+    |--remove succ.:       	765197	( 12.50 %)
+    size successful:       	0	( 0.00 %)
+    contains succ.:        	1530881	( 25.01 %)
+    unsuccessful ops:      	3058608	( 49.98 %)
+  Final size:              	1011
+  Expected size:           	1011
+
+
+BEGGINING NEW TEST
+
+-------------------------------------------------------------------------------
+Synchrobench-java
+A benchmark-suite to evaluate synchronization techniques
+-------------------------------------------------------------------------------
+
+Benchmark parameters
+--------------------
+  Detailed stats:          	disabled
+  Number of threads:       	2
+  Duration:                	5000 ms
+  Write ratio:             	90 %
+  Snapshot ratio:          	0 %
+  Size:                    	1024 elements
+  Range:                   	2048 elements
+  WarmUp:                  	5 s
+  Iterations:              	1
+  Benchmark:               	soft3410.CoarseGrainedSkiplistIntSet
+-------------------------------------------------------------------------------
+Benchmark statistics
+-------------------------------------------------------------------------------
+  Throughput (ops/s):       	1037123.0
+  Elapsed time (s):         	5.0
+  Operations:               	5185615	( 100 %)
+    effective updates:     	2334172	( 45.01 %)
+    |--add successful:     	1167047	( 22.51 %)
+    |--remove succ.:       	1167125	( 22.51 %)
+    size successful:       	0	( 0.00 %)
+    contains succ.:        	259290	( 5.00 %)
+    unsuccessful ops:      	2592153	( 49.99 %)
+  Final size:              	946
+  Expected size:           	946
+
+
+BEGGINING NEW TEST
+
+-------------------------------------------------------------------------------
+Synchrobench-java
+A benchmark-suite to evaluate synchronization techniques
+-------------------------------------------------------------------------------
+
+Benchmark parameters
+--------------------
+  Detailed stats:          	disabled
+  Number of threads:       	4
+  Duration:                	5000 ms
+  Write ratio:             	10 %
+  Snapshot ratio:          	0 %
+  Size:                    	1024 elements
+  Range:                   	2048 elements
+  WarmUp:                  	5 s
+  Iterations:              	1
+  Benchmark:               	soft3410.CoarseGrainedSkiplistIntSet
+-------------------------------------------------------------------------------
+Benchmark statistics
+-------------------------------------------------------------------------------
+  Throughput (ops/s):       	1594224.1551689662
+  Elapsed time (s):         	5.001
+  Operations:               	7972715	( 100 %)
+    effective updates:     	398807	( 5.00 %)
+    |--add successful:     	199416	( 2.50 %)
+    |--remove succ.:       	199391	( 2.50 %)
+    size successful:       	0	( 0.00 %)
+    contains succ.:        	3589177	( 45.02 %)
+    unsuccessful ops:      	3984731	( 49.98 %)
+  Final size:              	1049
+  Expected size:           	1049
+
+
+BEGGINING NEW TEST
+
+-------------------------------------------------------------------------------
+Synchrobench-java
+A benchmark-suite to evaluate synchronization techniques
+-------------------------------------------------------------------------------
+
+Benchmark parameters
+--------------------
+  Detailed stats:          	disabled
+  Number of threads:       	4
+  Duration:                	5000 ms
+  Write ratio:             	50 %
+  Snapshot ratio:          	0 %
+  Size:                    	1024 elements
+  Range:                   	2048 elements
+  WarmUp:                  	5 s
+  Iterations:              	1
+  Benchmark:               	soft3410.CoarseGrainedSkiplistIntSet
+-------------------------------------------------------------------------------
+Benchmark statistics
+-------------------------------------------------------------------------------
+  Throughput (ops/s):       	1249164.7670465906
+  Elapsed time (s):         	5.001
+  Operations:               	6247073	( 100 %)
+    effective updates:     	1560742	( 24.98 %)
+    |--add successful:     	780381	( 12.49 %)
+    |--remove succ.:       	780361	( 12.49 %)
+    size successful:       	0	( 0.00 %)
+    contains succ.:        	1562406	( 25.01 %)
+    unsuccessful ops:      	3123925	( 50.01 %)
+  Final size:              	1044
+  Expected size:           	1044
+
+
+BEGGINING NEW TEST
+
+-------------------------------------------------------------------------------
+Synchrobench-java
+A benchmark-suite to evaluate synchronization techniques
+-------------------------------------------------------------------------------
+
+Benchmark parameters
+--------------------
+  Detailed stats:          	disabled
+  Number of threads:       	4
+  Duration:                	5000 ms
+  Write ratio:             	90 %
+  Snapshot ratio:          	0 %
+  Size:                    	1024 elements
+  Range:                   	2048 elements
+  WarmUp:                  	5 s
+  Iterations:              	1
+  Benchmark:               	soft3410.CoarseGrainedSkiplistIntSet
+-------------------------------------------------------------------------------
+Benchmark statistics
+-------------------------------------------------------------------------------
+  Throughput (ops/s):       	1066418.1163767246
+  Elapsed time (s):         	5.001
+  Operations:               	5333157	( 100 %)
+    effective updates:     	2401079	( 45.02 %)
+    |--add successful:     	1200560	( 22.51 %)
+    |--remove succ.:       	1200519	( 22.51 %)
+    size successful:       	0	( 0.00 %)
+    contains succ.:        	266727	( 5.00 %)
+    unsuccessful ops:      	2665351	( 49.98 %)
+  Final size:              	1065
+  Expected size:           	1065
+
+
+BEGGINING NEW TEST
+
+-------------------------------------------------------------------------------
+Synchrobench-java
+A benchmark-suite to evaluate synchronization techniques
+-------------------------------------------------------------------------------
+
+Benchmark parameters
+--------------------
+  Detailed stats:          	disabled
+  Number of threads:       	6
+  Duration:                	5000 ms
+  Write ratio:             	10 %
+  Snapshot ratio:          	0 %
+  Size:                    	1024 elements
+  Range:                   	2048 elements
+  WarmUp:                  	5 s
+  Iterations:              	1
+  Benchmark:               	soft3410.CoarseGrainedSkiplistIntSet
+-------------------------------------------------------------------------------
+Benchmark statistics
+-------------------------------------------------------------------------------
+  Throughput (ops/s):       	2060034.1931613677
+  Elapsed time (s):         	5.001
+  Operations:               	10302231	( 100 %)
+    effective updates:     	515727	( 5.01 %)
+    |--add successful:     	257871	( 2.50 %)
+    |--remove succ.:       	257856	( 2.50 %)
+    size successful:       	0	( 0.00 %)
+    contains succ.:        	4637781	( 45.02 %)
+    unsuccessful ops:      	5148723	( 49.98 %)
+  Final size:              	1039
+  Expected size:           	1039
+
+
+BEGGINING NEW TEST
+
+-------------------------------------------------------------------------------
+Synchrobench-java
+A benchmark-suite to evaluate synchronization techniques
+-------------------------------------------------------------------------------
+
+Benchmark parameters
+--------------------
+  Detailed stats:          	disabled
+  Number of threads:       	6
+  Duration:                	5000 ms
+  Write ratio:             	50 %
+  Snapshot ratio:          	0 %
+  Size:                    	1024 elements
+  Range:                   	2048 elements
+  WarmUp:                  	5 s
+  Iterations:              	1
+  Benchmark:               	soft3410.CoarseGrainedSkiplistIntSet
+-------------------------------------------------------------------------------
+Benchmark statistics
+-------------------------------------------------------------------------------
+  Throughput (ops/s):       	1553718.7687387567
+  Elapsed time (s):         	5.003
+  Operations:               	7773255	( 100 %)
+    effective updates:     	1943235	( 25.00 %)
+    |--add successful:     	971621	( 12.50 %)
+    |--remove succ.:       	971614	( 12.50 %)
+    size successful:       	0	( 0.00 %)
+    contains succ.:        	1946245	( 25.04 %)
+    unsuccessful ops:      	3883775	( 49.96 %)
+  Final size:              	1031
+  Expected size:           	1031
+
+
+BEGGINING NEW TEST
+
+-------------------------------------------------------------------------------
+Synchrobench-java
+A benchmark-suite to evaluate synchronization techniques
+-------------------------------------------------------------------------------
+
+Benchmark parameters
+--------------------
+  Detailed stats:          	disabled
+  Number of threads:       	6
+  Duration:                	5000 ms
+  Write ratio:             	90 %
+  Snapshot ratio:          	0 %
+  Size:                    	1024 elements
+  Range:                   	2048 elements
+  WarmUp:                  	5 s
+  Iterations:              	1
+  Benchmark:               	soft3410.CoarseGrainedSkiplistIntSet
+-------------------------------------------------------------------------------
+Benchmark statistics
+-------------------------------------------------------------------------------
+  Throughput (ops/s):       	1250063.574570172
+  Elapsed time (s):         	5.002
+  Operations:               	6252818	( 100 %)
+    effective updates:     	2814780	( 45.02 %)
+    |--add successful:     	1407389	( 22.51 %)
+    |--remove succ.:       	1407391	( 22.51 %)
+    size successful:       	0	( 0.00 %)
+    contains succ.:        	313106	( 5.01 %)
+    unsuccessful ops:      	3124932	( 49.98 %)
+  Final size:              	1022
+  Expected size:           	1022
+
+
+BEGGINING NEW TEST
+
+-------------------------------------------------------------------------------
+Synchrobench-java
+A benchmark-suite to evaluate synchronization techniques
+-------------------------------------------------------------------------------
+
+Benchmark parameters
+--------------------
+  Detailed stats:          	disabled
+  Number of threads:       	8
+  Duration:                	5000 ms
+  Write ratio:             	10 %
+  Snapshot ratio:          	0 %
+  Size:                    	1024 elements
+  Range:                   	2048 elements
+  WarmUp:                  	5 s
+  Iterations:              	1
+  Benchmark:               	soft3410.CoarseGrainedSkiplistIntSet
+-------------------------------------------------------------------------------
+Benchmark statistics
+-------------------------------------------------------------------------------
+  Throughput (ops/s):       	2107024.5901639345
+  Elapsed time (s):         	5.002
+  Operations:               	10539337	( 100 %)
+    effective updates:     	526045	( 4.99 %)
+    |--add successful:     	263021	( 2.50 %)
+    |--remove succ.:       	263024	( 2.50 %)
+    size successful:       	0	( 0.00 %)
+    contains succ.:        	4743935	( 45.01 %)
+    unsuccessful ops:      	5269357	( 50.00 %)
+  Final size:              	1021
+  Expected size:           	1021
+
+
+BEGGINING NEW TEST
+
+-------------------------------------------------------------------------------
+Synchrobench-java
+A benchmark-suite to evaluate synchronization techniques
+-------------------------------------------------------------------------------
+
+Benchmark parameters
+--------------------
+  Detailed stats:          	disabled
+  Number of threads:       	8
+  Duration:                	5000 ms
+  Write ratio:             	50 %
+  Snapshot ratio:          	0 %
+  Size:                    	1024 elements
+  Range:                   	2048 elements
+  WarmUp:                  	5 s
+  Iterations:              	1
+  Benchmark:               	soft3410.CoarseGrainedSkiplistIntSet
+-------------------------------------------------------------------------------
+Benchmark statistics
+-------------------------------------------------------------------------------
+  Throughput (ops/s):       	1559538.061938062
+  Elapsed time (s):         	5.005
+  Operations:               	7805488	( 100 %)
+    effective updates:     	1951987	( 25.01 %)
+    |--add successful:     	975998	( 12.50 %)
+    |--remove succ.:       	975989	( 12.50 %)
+    size successful:       	0	( 0.00 %)
+    contains succ.:        	1949955	( 24.98 %)
+    unsuccessful ops:      	3903546	( 50.01 %)
+  Final size:              	1033
+  Expected size:           	1033
+
+
+BEGGINING NEW TEST
+
+-------------------------------------------------------------------------------
+Synchrobench-java
+A benchmark-suite to evaluate synchronization techniques
+-------------------------------------------------------------------------------
+
+Benchmark parameters
+--------------------
+  Detailed stats:          	disabled
+  Number of threads:       	8
+  Duration:                	5000 ms
+  Write ratio:             	90 %
+  Snapshot ratio:          	0 %
+  Size:                    	1024 elements
+  Range:                   	2048 elements
+  WarmUp:                  	5 s
+  Iterations:              	1
+  Benchmark:               	soft3410.CoarseGrainedSkiplistIntSet
+-------------------------------------------------------------------------------
+Benchmark statistics
+-------------------------------------------------------------------------------
+  Throughput (ops/s):       	1277535.0789526284
+  Elapsed time (s):         	5.003
+  Operations:               	6391508	( 100 %)
+    effective updates:     	2874293	( 44.97 %)
+    |--add successful:     	1437150	( 22.49 %)
+    |--remove succ.:       	1437143	( 22.49 %)
+    size successful:       	0	( 0.00 %)
+    contains succ.:        	319875	( 5.00 %)
+    unsuccessful ops:      	3197340	( 50.02 %)
+  Final size:              	1031
+  Expected size:           	1031
+
+
+TESTS COMPLETE
+

@@ -19,12 +19,15 @@ import java.lang.Math;
 /**
  * A sequential skip-list implementation of an int set.
  */
+
 public class SkiplistIntSet
         extends contention.abstractions.AbstractCompositionalIntSet {
 
     final private int maxIndex;
     final public Node head;
     final public Node tail;
+    private static transient int randomSeed = new Random().nextInt() | 0x0100;
+
 
     public SkiplistIntSet() {
         this.maxIndex = 100;
@@ -35,13 +38,30 @@ public class SkiplistIntSet
         }
     }
 
+    public static int randomLeveler() {
+        int x = randomSeed;
+        x ^= x << 13;
+        x ^= x >>17;
+        randomSeed = x ^= x <<5;
+        if ((x & 0x80000001) != 0)
+            return 0;
+        int level = 1;
+        while (((x >>>= 1) & 1) != 0)
+            ++level;
+        return level;
+    }
+
+    private int randomLevel() {
+        return Math.min((maxIndex - 1), (randomLeveler()));
+    }
+
     public boolean addInt(int value) {
 
         Node[] update = new Node[maxIndex + 1];
         Node curr = head;
         for (int i = maxIndex; i >= 0; i--) {
             Node next = curr.getNext(i);
-            while (next.getValue() < value) {
+            while (next != null && next.getValue() < value) {
                 curr = next;
                 next = curr.getNext(i);
             }
@@ -51,7 +71,8 @@ public class SkiplistIntSet
         if (curr.getValue() == value) {
             return false;
         } else {
-            int level = (int) Math.floor(Math.random()*maxIndex); //might need to minus 1
+//            int level = (int) Math.floor(Math.random()*maxIndex); //might need to minus 1
+            int level = randomLevel();
             curr = new Node(level, value);
             for (int i = 0; i <= level; i++) {
                 curr.setNext(i, update[i].getNext(i));
@@ -67,7 +88,7 @@ public class SkiplistIntSet
         Node curr = head;
         for (int i = maxIndex; i >= 0; i--) {
             Node next = curr.getNext(i);
-            while (next.getValue() < value) {
+            while (next.getValue() < value && next != null) {
                 curr = next;
                 next = curr.getNext(i);
             }
@@ -91,7 +112,7 @@ public class SkiplistIntSet
         Node curr = head;
         for (int i = maxIndex; i >= 0; i--) {
             Node next = curr.getNext(i);
-            while(next.getValue() < value) {
+            while(next != null && next.getValue() < value) {
                 curr = next;
                 next = curr.getNext(i);
             }
@@ -100,7 +121,7 @@ public class SkiplistIntSet
         return (curr.getValue() == value);
     }
 
-    public int size() {
+    public synchronized int size() {
         int i = 0;
         Node curr = head.getNext(0).getNext(0);
         while (curr != null) {

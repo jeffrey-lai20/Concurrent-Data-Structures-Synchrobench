@@ -15,6 +15,7 @@ import java.util.Collection;
 import java.util.Random;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
+import java.lang.Math;
 
 public final class FasterSkiplistIntSet
         extends contention.abstractions.AbstractCompositionalIntSet {
@@ -54,6 +55,7 @@ public final class FasterSkiplistIntSet
         return Math.min((maxLevel - 1), (randomLeveler()));
     }
 
+
     public FasterSkiplistIntSet() {
         this(31);
     }
@@ -70,7 +72,7 @@ public final class FasterSkiplistIntSet
     @Override
     public int size() {
         int size = 0;
-        Node node = head.next[0].next[0];
+        Node node = head.next[0].next[0];   //Exclude count for head and tail.
 
         while (node != null) {
             node = node.next[0];
@@ -92,7 +94,7 @@ public final class FasterSkiplistIntSet
         Node[] preds = (Node[]) new Node[maxLevel + 1];
         Node[] succs = (Node[]) new Node[maxLevel + 1];
         int levelFound = find(value, preds, succs);
-        return (levelFound != -1 && succs[levelFound].fullyLinked && !succs[levelFound].marked);
+        return (levelFound != -1 && succs[levelFound].fullyLinked);
     }
 
     /* The preds[] and succs[] arrays are filled from the maximum level to 0 with the predecessor and successor references for the given key. */
@@ -118,6 +120,26 @@ public final class FasterSkiplistIntSet
         return levelFound;
     }
 
+    public Node findPredecessor(int value, int level) {
+        int key = value;
+        Node pred = head;
+        while(pred.next[level].key < value) {
+            pred = pred.next[level];
+        }
+        return pred;
+    }
+
+    private boolean validate(int level, Node[] predecessors, Node[] successors) {
+        int topLevel = level;
+            for (int i = 0; i < topLevel; i++) {
+                Node current = findPredecessor(successors[i].key, i);
+                if (current.key == predecessors[i].key) {
+                    return predecessors[i].next[i].key == successors[i].key;
+                }
+            }
+            return false;
+    }
+
     /**
      * Optimistic locking of addInt. Find nodes without locking, then lock nodes,
      * and finally check that everything is okay.
@@ -126,168 +148,83 @@ public final class FasterSkiplistIntSet
      */
     @Override
     public boolean addInt(final int value) {
+//        int topLevel = (int) Math.floor(Math.random()*maxLevel); //Might need to minus 1, but sets the random highest level for the int
         int topLevel = randomLevel();
-        Node[] preds = (Node[]) new Node[maxLevel+ 1];
-        Node[] succs = (Node[]) new Node[maxLevel+ 1];
+        Node[] predecessors = (Node[]) new Node[maxLevel + 1];  //Sets of predecessors for different levels
+        Node[] successors = (Node[]) new Node[maxLevel + 1];    //Sets of successors for different levels
 
-        while (true) {
-            /* Call find() to initialize preds and succs. */
-            int levelFound = find(value, preds, succs);
-            
-//
-            /* If an node is found that is unmarked then return false. */
-//            if (levelFound != -1) {
-//                Node nodeFound = succs[levelFound];
-////                if (!nodeFound.marked) {
-////                    /* Needs to wait for nodes to become fully linked. */
-////                    while (!nodeFound.fullyLinked) {}
-////                    return false;
-////                }
-////                /* If marked another thread is deleting it, so we retry. */
-////                continue;
-//            }
-
-                //^^ That be a spin lock that says if it finds the level, and it isn't marked, wait in a while loop until it's fully linked.
-            //  if it be fully linked, then start the whole while loop again.
-
-            int highestLocked = -1;
-
-            try {
-                Node pred, succ;
-//                boolean valid = true;
-
-                /* Acquire locks. */
-                for (int level = 0; (level <= topLevel); level++) {
-                    pred = preds[level];
-                    succ = succs[level];
-                    pred.lock.lock();
-                    highestLocked = level;
-//                    valid = !pred.marked && !succ.marked && pred.next[level]==succ;
-                }
-
-                for (int level = 0; (level <= topLevel); level++) {
-                    pred = preds[level];
-                    succ = succs[level];
-                    if (!containsInt(pred)) return false;
-//                    pred.lock.lock();
-//                    highestLocked = level;
-//                    valid = !pred.marked && !succ.marked && pred.next[level]==succ;
-                }
-
-
-                /* Must have encountered effects of a conflicting method, so it releases (in the
-                 * finally block) the locks it acquired and retries */
-//                if (!valid) {
+        int levelFound = find(value, predecessors, successors);
+        //If it already exists then leave? yeah leave
+        //No don't leave, that sets predecessors and successors. Only returns -1 if nothing is filled? I think
+        //Ohh returns -1 if nothing is filled or if the value doesn't exist.
+        if (levelFound != -1) {
+                    return false;
+            }
+//        while (true) {
+            synchronized (predecessors) {
+                synchronized (successors) {
+                    if (validate(topLevel, predecessors, successors)) {
+                        //Goes through each level and sets the appropriate successor
+                        Node newNode = new Node(value, topLevel);
+                        for (int level = 0; level <= topLevel; level++) {
+                            newNode.next[level] = successors[level];
+                        }
+                        //Goes through each level and sets the appropriate next node for the predecessors
+                        for (int level = 0; level <= topLevel; level++) {
+                            predecessors[level].next[level] = newNode;
+                        }
+                        //After done, set fully linked as true
+                        newNode.fullyLinked = true;
+                        return true;
+                    }
 //                    continue;
-//                }
-
-                // Ayo this part below adds the new node, adding the next nodes for each successive level for next and prevs
-
-                Node newNode = new Node(value, topLevel);
-                for (int level = 0; level <= topLevel; level++) {
-                    newNode.next[level] = succs[level];
-                }
-                for (int level = 0; level <= topLevel; level++) {
-                    preds[level].next[level] = newNode;
-                }
-                newNode.fullyLinked = true; // successful and linearization point
-                return true;
-
-                //It be fully linked bc all levels are fully linked
-
-            } finally {
-                for (int level = 0; level <= highestLocked; level++) {
-                    preds[level].unlock();
+                    return false;
                 }
             }
-
-        }
-
+//        }
     }
 
     @Override
     public boolean removeInt(final int value) {
-        Node victim = null;
-        boolean isMarked = false;
-        int topLevel = -1;
-        Node[] preds = (Node[]) new Node[maxLevel + 1];
-        Node[] succs = (Node[]) new Node[maxLevel + 1];
+        Node victim = null; //Victim to remove probs
+        int topLevel = -1;  //Max level that victim exists at
+        Node[] predecessors = (Node[]) new Node[maxLevel + 1];    //Victim's predecessors
+        Node[] successors = (Node[]) new Node[maxLevel + 1];   //Victim's successors
+        int levelFound = find(value, predecessors, successors); //Initialize predecessors and successors
 
-        while (true) {
-            /* Call find() to initialize preds and succs. */
-            int levelFound = find(value, preds, succs);
-            if (levelFound != -1) {
-                victim = succs[levelFound];
-            }
-
-            /* Ready to delete if unmarked, fully linked, and at its top level. */
-//            if (isMarked | (levelFound != -1 && (victim.fullyLinked && victim.topLevel == levelFound && !victim.marked))) {
-//
-//                /* Acquire locks in order to logically delete. */
-//                if (!isMarked) {
-//                    topLevel = victim.topLevel;
-//                    victim.lock.lock();
-//                    if (victim.marked) {
-//                        victim.lock.unlock();
-//                        return false;
-//                    }
-//                    victim.marked = true; // logical deletion
-//                    isMarked = true;
-//                }
-
-                int highestLocked = -1;
-
-                try {
-                    Node pred, succ;
-//                    boolean valid = true;
-
-                    /* Acquire locks. */
-                    for (int level = 0; valid && (level <= topLevel); level++) {
-                        pred = preds[level];
-                        pred.lock.lock();
-                        highestLocked = level;
-                        valid = !pred.marked && pred.next[level]==victim;
-                    }
-
-                    /* Acquire locks. */
-                    for (int level = 0; valid && (level <= topLevel); level++) {
-                        pred = preds[level];
-                        if (!containsInt(pred)) return false;
-//                        pred.lock.lock();
-//                        highestLocked = level;
-//                        valid = !pred.marked && pred.next[level]==victim;
-                    }
-
-                    /* Pred has changed and is no longer suitable, thus unlock and retries. */
-//                    if (!valid) {
-//                        continue;
-//                    }
-
-                    /* Unlink. */
-                    for (int level = topLevel; level >= 0; level--) {
-                        preds[level].next[level] = victim.next[level];
-                    }
-                    victim.lock.unlock();
-                    return true;
-
-                } finally {
-                    for (int i = 0; i <= highestLocked; i++) {
-                        preds[i].unlock();
-                    }
-                }
-            } else {
-                return false;
-            }
+        //levelFound is -1 which means that the value isn't found.
+        if (levelFound == -1) {
+            return false;
         }
+        //If the level is actually found then the victim is the successor
+        victim = successors[levelFound];
 
+        topLevel = victim.topLevel;
+        if (victim.fullyLinked && victim.topLevel == levelFound) {  //If the node is fully linked (preds and succs for all levels connected) and level is the same as found
+//            if (victim.fullyLinked) {
+//                synchronized (victim) {
+                    synchronized (predecessors) {
+                        synchronized (successors) {
+                            if (validate(levelFound, predecessors, successors)) {
+                                //Unlink
+                                for (int level = topLevel; level >= 0; level--) {
+                                    predecessors[level].next[level] = victim.next[level];   //set the predecessors of the victim to the victim's successors
+                                }
+                                return true;
 
+                            }
+                        }
+                    }
+//                }
+//            }
+        }
+        return false;
     }
 
     private static final class Node {
         final Lock lock = new ReentrantLock();
         final int key;
         final Node[] next;
-        volatile boolean marked = false;
         volatile boolean fullyLinked = false;
         private int topLevel;
 
@@ -296,6 +233,7 @@ public final class FasterSkiplistIntSet
             next = new Node[height + 1];
             topLevel = height;
         }
+
 
         public void lock() {
             lock.lock();
