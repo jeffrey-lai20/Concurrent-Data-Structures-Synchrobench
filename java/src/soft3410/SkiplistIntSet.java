@@ -3,8 +3,11 @@
  *  "The Art of Multiprocessor Programming"
  *  M. Herlihy, N. SHavit
  *  chapter 14.3, 2008,
+ *  Synchrobench's source code, v1.1.0-alpha
+ *  "SequentialSkipListIntSet.java"
  *  https://github.com/gramoli/synchrobench/blob/master/java/src/skiplists/sequential/SequentialSkipListIntSet.java,
  *  and
+ *  "RandomLevelGenerator.java"
  *  https://github.com/gramoli/synchrobench/blob/master/java/src/skiplists/RandomLevelGenerator.java
  *  by Vincent Gramoli.
  */
@@ -23,11 +26,13 @@ import java.lang.Math;
 public class SkiplistIntSet
         extends contention.abstractions.AbstractCompositionalIntSet {
 
+    /** The maximum number of levels */
     final private int maxIndex;
+    /** The first element of the list */
     final public Node head;
+    /** The last element of the list */
     final public Node tail;
     private static transient int randomSeed = new Random().nextInt() | 0x0100;
-
 
     public SkiplistIntSet() {
         this.maxIndex = 100;
@@ -38,6 +43,10 @@ public class SkiplistIntSet
         }
     }
 
+    /**
+     * Random level int generator.
+     * @return
+     */
     public static int randomLeveler() {
         int x = randomSeed;
         x ^= x << 13;
@@ -51,12 +60,21 @@ public class SkiplistIntSet
         return level;
     }
 
+    /**
+     * Random level int generator in range of maximum level.
+     * @return
+     */
     private int randomLevel() {
         return Math.min((maxIndex - 1), (randomLeveler()));
     }
 
+    /**
+     * Finds the position the new node is to be added, and checks if the value already exists.
+     * For each level, relinks the predecessors and successors of the linked list to the new valued node.
+     * @param value
+     * @return
+     */
     public boolean addInt(int value) {
-
         Node[] update = new Node[maxIndex + 1];
         Node curr = head;
         for (int i = maxIndex; i >= 0; i--) {
@@ -71,7 +89,6 @@ public class SkiplistIntSet
         if (curr.getValue() == value) {
             return false;
         } else {
-//            int level = (int) Math.floor(Math.random()*maxIndex); //might need to minus 1
             int level = randomLevel();
             curr = new Node(level, value);
             for (int i = 0; i <= level; i++) {
@@ -82,8 +99,13 @@ public class SkiplistIntSet
         }
     }
 
+    /**
+     * Finds the appropriate node and checks if the value to be removed exists.
+     * If so, delinks the node and links the predecessors the the successors.
+     * @param value
+     * @return
+     */
     public boolean removeInt(int value) {
-
         Node[] update = new Node[maxIndex + 1];
         Node curr = head;
         for (int i = maxIndex; i >= 0; i--) {
@@ -95,7 +117,6 @@ public class SkiplistIntSet
             update[i] = curr;
         }
         curr = curr.getNext(0);
-
         if (curr.getValue() != value) {
             return false;
         } else {
@@ -105,9 +126,13 @@ public class SkiplistIntSet
             }
             return true;
         }
-
     }
 
+    /**
+     * Goes through the levels and linked lists to check if the value exists in the skip-list.
+     * @param value
+     * @return
+     */
     public boolean containsInt(int value) {
         Node curr = head;
         for (int i = maxIndex; i >= 0; i--) {
@@ -121,6 +146,11 @@ public class SkiplistIntSet
         return (curr.getValue() == value);
     }
 
+    /**
+     * Traverses the bottom level of the skiplist, counting all nodes.
+     * Returns the number of unique valued nodes in the skip-list.
+     * @return
+     */
     public synchronized int size() {
         int i = 0;
         Node curr = head.getNext(0).getNext(0);
@@ -131,14 +161,20 @@ public class SkiplistIntSet
         return i;
     }
 
+    /**
+     * Clears the skip-list, removing all elements by setting
+     * the head node to point to the tail node.
+     */
     public void clear() {
         for (int i = 0; i <= this.maxIndex; i++) {
             this.head.setNext(i, this.tail);
         }
     }
 
+    /**
+     * Class Node used for the link list.
+     */
     public class Node {
-
         final private int value;
         final private Node[] next;
 
@@ -147,35 +183,38 @@ public class SkiplistIntSet
             next = new Node[index+1];
         }
 
+        /**
+         * Returns the node's value.
+         * @return
+         */
         public int getValue() {
             return this.value;
         }
 
+        /**
+         * Returns the node's index.
+         * @return
+         */
         public int getIndex() {
             return next.length - 1;
         }
 
+        /**
+         * Sets the node's successor.
+         * @param index
+         * @param successor
+         */
         public void setNext(final int index, final Node successor) {
             next[index] = successor;
         }
 
+        /**
+         * Returns the node's successor.
+         * @param index
+         * @return
+         */
         public Node getNext(final int index) {
             return next[index];
         }
-
-        public String toString() {
-            String out = "";
-            out += "Index: " + getIndex() + " Value: " + value;
-            for (int i = 0; i <= getIndex(); i++) {
-                out += " @[" + i + "]=";
-                if (next[i] != null) {
-                    out += next[i].getValue();
-                } else {
-                    out += "null";
-                }
-            }
-            return out;
-        }
     }
-
 }

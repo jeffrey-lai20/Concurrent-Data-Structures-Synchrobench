@@ -3,8 +3,11 @@
  *  "The Art of Multiprocessor Programming"
  *  M. Herlihy, N. SHavit
  *  chapter 14.3, 2008,
+ *  Synchrobench's source code, v1.1.0-alpha
+ *  "LazySkipList.java"
  *  https://github.com/gramoli/synchrobench/blob/master/java/src/skiplists/lockbased/LazySkipList.java,
  *  and
+ *  "RandomLevelGenerator.java"
  *  https://github.com/gramoli/synchrobench/blob/master/java/src/skiplists/RandomLevelGenerator.java
  *  by Vincent Gramoli.
  */
@@ -17,6 +20,9 @@ import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 import java.lang.Math;
 
+/**
+ * A fine-grained optimistic locking skip-list implementation of an int set.
+ */
 public final class FasterSkiplistIntSet
         extends contention.abstractions.AbstractCompositionalIntSet {
 
@@ -38,6 +44,10 @@ public final class FasterSkiplistIntSet
 
     private static transient int randomSeed = new Random().nextInt() | 0x0100;
 
+    /**
+     * Random level int generator.
+     * @return
+     */
     public static int randomLeveler() {
         int x = randomSeed;
         x ^= x << 13;
@@ -51,28 +61,32 @@ public final class FasterSkiplistIntSet
         return level;
     }
 
+    /**
+     * Random level int generator in range of maximum level.
+     * @return
+     */
     private int randomLevel() {
         return Math.min((maxLevel - 1), (randomLeveler()));
     }
 
-
     public FasterSkiplistIntSet() {
-        this(31);
-    }
-
-    public FasterSkiplistIntSet(final int maxLevel) {
         this.head = new Node(Integer.MIN_VALUE, maxLevel);
         this.tail = new Node(Integer.MAX_VALUE, maxLevel);
-        this.maxLevel = maxLevel;
+        this.maxLevel = 100;
         for (int i = 0; i <= maxLevel; i++) {
             head.next[i] = tail;
         }
     }
 
+    /**
+     * Traverses the bottom level of the skiplist, counting all nodes.
+     * Returns the number of unique valued nodes in the skip-list.
+     * @return
+     */
     @Override
     public int size() {
         int size = 0;
-        Node node = head.next[0].next[0];   //Exclude count for head and tail.
+        Node node = head.next[0].next[0];
 
         while (node != null) {
             node = node.next[0];
@@ -81,6 +95,10 @@ public final class FasterSkiplistIntSet
         return size;
     }
 
+    /**
+     * Clears the skip-list, removing all elements by setting
+     * the head node to point to the tail node.
+     */
     @Override
     public void clear() {
         for (int i = 0; i <= this.maxLevel; i++) {
@@ -89,6 +107,12 @@ public final class FasterSkiplistIntSet
         return;
     }
 
+    /**
+     * Calls the find method to check if the value exists in the skip-list.
+     * Checks to see if the node is fully linked, assuring it isn't being removed.
+     * @param value
+     * @return
+     */
     @Override
     public boolean containsInt(final int value) {
         Node[] preds = (Node[]) new Node[maxLevel + 1];
@@ -97,7 +121,15 @@ public final class FasterSkiplistIntSet
         return (levelFound != -1 && succs[levelFound].fullyLinked);
     }
 
-    /* The preds[] and succs[] arrays are filled from the maximum level to 0 with the predecessor and successor references for the given key. */
+    /**
+     * Goes through the levels and linked list to find the value.
+     * Returns -1 if the value is not found, otherwise returns
+     * the level it exists up to.
+     * @param value
+     * @param preds
+     * @param succs
+     * @return
+     */
     private int find(final int value, Node[] preds, Node[] succs) {
         int key = value;
         int levelFound = -1;
@@ -120,6 +152,13 @@ public final class FasterSkiplistIntSet
         return levelFound;
     }
 
+    /**
+     * Goes through the level's linked list to find the predecessor node.
+     * Returns the found predecessor.
+     * @param value
+     * @param level
+     * @return
+     */
     public Node findPredecessor(int value, int level) {
         int key = value;
         Node pred = head;
@@ -129,38 +168,42 @@ public final class FasterSkiplistIntSet
         return pred;
     }
 
+    /**
+     * For each level, checks if the predecessor of the successors is still the same.
+     * Returns false if predecessors/successors have changed.
+     * @param level
+     * @param predecessors
+     * @param successors
+     * @return
+     */
     private boolean validate(int level, Node[] predecessors, Node[] successors) {
         int topLevel = level;
             for (int i = 0; i < topLevel; i++) {
                 Node current = findPredecessor(successors[i].key, i);
                 if (current.key == predecessors[i].key) {
-                    return predecessors[i].next[i].key == successors[i].key;
+                    if (predecessors[i].next[i].key != successors[i].key) return false;
                 }
             }
-            return false;
+            return true;
     }
 
     /**
-     * Optimistic locking of addInt. Find nodes without locking, then lock nodes,
+     * Optimistic locking of addInt. Finds nodes without locking, then lock nodes,
      * and finally check that everything is okay.
      * @param value
      * @return
      */
     @Override
     public boolean addInt(final int value) {
-//        int topLevel = (int) Math.floor(Math.random()*maxLevel); //Might need to minus 1, but sets the random highest level for the int
         int topLevel = randomLevel();
         Node[] predecessors = (Node[]) new Node[maxLevel + 1];  //Sets of predecessors for different levels
         Node[] successors = (Node[]) new Node[maxLevel + 1];    //Sets of successors for different levels
 
         int levelFound = find(value, predecessors, successors);
-        //If it already exists then leave? yeah leave
-        //No don't leave, that sets predecessors and successors. Only returns -1 if nothing is filled? I think
-        //Ohh returns -1 if nothing is filled or if the value doesn't exist.
+        //Level found isn't -1, which means it already exists
         if (levelFound != -1) {
                     return false;
             }
-//        while (true) {
             synchronized (predecessors) {
                 synchronized (successors) {
                     if (validate(topLevel, predecessors, successors)) {
@@ -177,13 +220,17 @@ public final class FasterSkiplistIntSet
                         newNode.fullyLinked = true;
                         return true;
                     }
-//                    continue;
                     return false;
                 }
             }
-//        }
     }
 
+    /**
+     * Checks if the value exists, and then removes it by setting its predecessors'
+     * next node to the node to be removed's next node.
+     * @param value
+     * @return
+     */
     @Override
     public boolean removeInt(final int value) {
         Node victim = null; //Victim to remove probs
@@ -198,11 +245,8 @@ public final class FasterSkiplistIntSet
         }
         //If the level is actually found then the victim is the successor
         victim = successors[levelFound];
-
         topLevel = victim.topLevel;
         if (victim.fullyLinked && victim.topLevel == levelFound) {  //If the node is fully linked (preds and succs for all levels connected) and level is the same as found
-//            if (victim.fullyLinked) {
-//                synchronized (victim) {
                     synchronized (predecessors) {
                         synchronized (successors) {
                             if (validate(levelFound, predecessors, successors)) {
@@ -211,16 +255,16 @@ public final class FasterSkiplistIntSet
                                     predecessors[level].next[level] = victim.next[level];   //set the predecessors of the victim to the victim's successors
                                 }
                                 return true;
-
                             }
                         }
                     }
-//                }
-//            }
         }
         return false;
     }
 
+    /**
+     * Class Node used for the link list.
+     */
     private static final class Node {
         final Lock lock = new ReentrantLock();
         final int key;
@@ -233,15 +277,5 @@ public final class FasterSkiplistIntSet
             next = new Node[height + 1];
             topLevel = height;
         }
-
-
-        public void lock() {
-            lock.lock();
-        }
-
-        public void unlock() {
-            lock.unlock();
-        }
     }
-
 }
